@@ -11,12 +11,15 @@ An individual's knowledge, abilities, and expertise in the field of cybersecurit
 
 
 ## Dependencies -
-1. Vite
-1. NodeJS
-1. ExpressJS
-1. ReactJS
-1. TailwindCSS
-1. Nodemon
+1. Vite - v5.1.6
+1. NodeJS - v20.11.1
+1. ExpressJS - v4.18.3
+1. ReactJS - v18.2.0
+1. ReactJS-dom - v18.2.0
+1. TailwindCSS -
+1. Nodemon - v3.1.0  
+
+</br>  
 
 # 🚧Under Development🚧 
 This webapp is still in its development and testing phase. The url will be open soon.
