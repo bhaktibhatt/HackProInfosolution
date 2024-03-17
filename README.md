@@ -2,7 +2,7 @@
 ### Learn Cyber Security tools and concepts and get Certifications.
 
 An individual's knowledge, abilities, and expertise in the field of cybersecurity are demonstrated in concrete form by the cybersecurity certification programme, which is why it is significant. It can assist people progress in their careers at their current companies as well as help them differentiate themselves from other applicants on the job market. When recruiting or elevating cybersecurity specialists, employers frequently need or favour certificates.
-![Hackpro Info Solution](Client\src\assets\image.png)
+![Hackpro Info Solution](./Client/src/assets/image.png)
 
 ## Tech Stack -
 
