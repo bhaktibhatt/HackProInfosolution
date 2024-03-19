@@ -1,6 +1,20 @@
 import React from "react";
 import Tools from '../assets/Tools.png'
 const Main = () =>{
+    const row1 = [
+        "Client/src/assets/ISO.png",
+        "Client/src/assets/MSME.png",
+        "Client/src/assets/SkillIndia.png",
+        "Client/src/assets/CNI.png",
+        "Client/src/assets/ASNI.png"
+    ]
+    const row2 = [
+        "Client/src/assets/DigitalIndia.png",
+        "Client/src/assets/UKAC.png",
+        "Client/src/assets/QRO.png",
+        "Client/src/assets/iqcs.png", 
+        "Client/src/assets/IAF.png"
+    ]
     return(
         <div className="m-20">
             <h3 className="py-10 text-5xl">Why is Certification Important?</h3>
@@ -11,6 +25,12 @@ const Main = () =>{
              <div>
                 <h3 className="py-20 text-5xl">Tools You Learn -</h3>
                 <img src={ Tools } alt="" />
+             </div>
+             <div>
+                <h3 className="py-20 text-5xl">Accreditations</h3>
+                <div>
+                    
+                </div>
              </div>
         </div>
 
