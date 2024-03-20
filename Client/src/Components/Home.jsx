@@ -1,26 +1,28 @@
 import React from "react";
 import Tools from '../assets/Tools.png'
 import image from "../assets/image.png"
+import Marquee from 'react-fast-marquee';
 const Main = () =>{
     const row1 = [
-        "Client/src/assets/ISO.png",
-        "Client/src/assets/MSME.png",
-        "Client/src/assets/SkillIndia.png",
-        "Client/src/assets/CNI.png",
-        "Client/src/assets/ASNI.png"
+        "./src/assets/ISO.png",
+        "./src/assets/MSME.png",
+        "./src/assets/SkillIndia.png",
+        "./src/assets/CNI.png",
+        "./src/assets/ASNI.png"
     ]
     const row2 = [
-        "Client/src/assets/DigitalIndia.png",
-        "Client/src/assets/UKAC.png",
-        "Client/src/assets/QRO.png",
-        "Client/src/assets/iqcs.png", 
-        "Client/src/assets/IAF.png"
+        "./src/assets/DigitalIndia.png",
+        "./src/assets/UKAC.png",
+        "./src/assets/QRO.png",
+        "./src/assets/iqcs.png", 
+        "./src/assets/IAF.png"
     ]
+
     return(
         <div>
-        <div className="relative w-full">
-            <img className="w-full h-3/4" src={ image } alt="" />
-            <button className="absolute top-2/3 left-72 bg-slate-50 px-6 py-4 rounded-2xl text-3xl text-violet-900  hover:drop-shadow-xl hover:">Enroll Now</button>
+            <div className="relative w-full">
+                <img className="w-full h-3/4" src={ image } alt="" />
+                <button className="absolute top-2/3 left-72 bg-slate-50 px-6 py-4 rounded-2xl text-3xl text-violet-900  hover:drop-shadow-xl hover:">Enroll Now</button>
         </div>
         <div className="m-20">
             <h3 className="py-10 text-5xl">Why is Certification Important?</h3>
@@ -32,10 +34,25 @@ const Main = () =>{
                 <h3 className="py-20 text-5xl">Tools You Learn -</h3>
                 <img src={ Tools } alt="" />
              </div>
-             <div>
-                <h3 className="py-20 text-5xl">Accreditations</h3>
-                <div>
-                    
+             <div className="w-full flex flex-col items-center">
+                <h3 className="pb-14 pt-20 text-5xl">Accreditations</h3>
+                <div className="w-full rounded-xl">
+                    <Marquee speed={100} autoFill behavior="" direction="left">
+                    <div className="flex flex-row ">
+                        <div className=" flex items-center">
+                        {row1.map((im) =>(
+                            <img className="h-32 m-4" src={im}></img>
+                            ))}
+                        </div>
+                    </div>
+                    </Marquee>
+                    <Marquee speed={100} autoFill behavior="" direction="right">
+                    <div className="px-8 flex items-center ">
+                        {row2.map((im) =>(
+                        <img className="h-32 m-6" src={im}></img>
+                        ))}
+                    </div>
+                    </Marquee>
                 </div>
              </div>
         </div>
