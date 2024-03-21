@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from "./Components/Navbar.jsx"
 import About from "./pages/About.jsx"
 import Home from "./Components/Home.jsx"
+import Footer from './Components/Footer.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route exact path='/about' element={ <About/> }></Route>
         </Routes> 
        </div>
+       <Footer/>
       </Router>
   )
 }
