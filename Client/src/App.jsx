@@ -16,7 +16,7 @@ function App() {
           <Route exact path='/about' element={ <About/> }></Route>
         </Routes> 
        </div>
-       {/* <Home/> */}
+       <Home/>
        <Footer/>
       </Router>
   )
