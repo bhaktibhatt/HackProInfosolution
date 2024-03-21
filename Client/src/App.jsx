@@ -16,7 +16,7 @@ function App() {
           <Route exact path='/about' element={ <About/> }></Route>
         </Routes> 
        </div>
-       <Home/>gi
+       <Home/>
        <Footer/>
       </Router>
   )
