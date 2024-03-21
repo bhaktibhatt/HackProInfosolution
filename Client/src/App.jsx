@@ -12,7 +12,7 @@ function App() {
       <div>
         <Navbar/>
        <Routes>
-          <Route  exact path='/home' element={<Home/>}></Route>
+          {/* <Route  exact path='/home' element={<Home/>}></Route> */}
           <Route exact path='/about' element={ <About/> }></Route>
         </Routes> 
        </div>
