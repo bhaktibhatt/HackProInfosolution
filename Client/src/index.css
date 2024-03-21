@@ -1,4 +1,8 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient{
+    mask: linear-gradient(90deg, transparent, #ffffff 10%, #ffffff 80%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, #ffffff 10%, #ffffff 80%, transparent);
+}

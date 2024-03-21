@@ -12,11 +12,11 @@ function App() {
       <div>
         <Navbar/>
        <Routes>
-          <Route  exact path='/home' element={<Home/>}></Route>
-          <Route exact path='/about' element={ <About/> }></Route>
+          <Route  exact path='/HackProInfosolution/home' element={<Home/>}></Route>
+          <Route exact path='/HackProInfosolution/about' element={ <About/> }></Route>
         </Routes> 
        </div>
-       <Home/>
+       {/* <Home/> */}
        <Footer/>
       </Router>
   )

@@ -4,18 +4,18 @@ import image from "../assets/image.png"
 import Marquee from 'react-fast-marquee';
 const Main = () =>{
     const row1 = [
-        "./HackProInfosolution/src/assets/ISO.png",
-        "./HackProInfosolution/src/assets/MSME.png",
-        "./HackProInfosolution/src/assets/SkillIndia.png",
-        "./HackProInfosolution/src/assets/CNI.png",
-        "./HackProInfosolution/src/assets/ASNI.png"
+        "/HackProInfosolution/src/assets/ISO.png",
+        "/HackProInfosolution/src/assets/MSME.png",
+        "/HackProInfosolution/src/assets/SkillIndia.png",
+        "/HackProInfosolution/src/assets/CNI.png",
+        "/HackProInfosolution/src/assets/ASNI.png"
     ]
     const row2 = [
-        "./HackProInfosolution/src/assets/DigitalIndia.png",
-        "./HackProInfosolution/src/assets/UKAC.png",
-        "./HackProInfosolution/src/assets/QRO.png",
-        "./HackProInfosolution/src/assets/iqcs.png", 
-        "./HackProInfosolution/src/assets/IAF.png"
+        "/HackProInfosolution/src/assets/DigitalIndia.png",
+        "/HackProInfosolution/src/assets/UKAC.png",
+        "/HackProInfosolution/src/assets/QRO.png",
+        "/HackProInfosolution/src/assets/iqcs.png", 
+        "/HackProInfosolution/src/assets/IAF.png"
     ]
 
     return(
@@ -36,7 +36,7 @@ const Main = () =>{
                     <img src={ Tools } alt="" />
                 </div>
              </div>
-             <div className="w-full flex flex-col items-center my-40">
+             <div className="w-full flex flex-col items-center my-40 gradient">
                 <h3 className="pb-14 pt-20 text-5xl">Accreditations</h3>
                 <div className="w-full rounded-xl">
                     <Marquee speed={20} autoFill behavior="" direction="left">
