@@ -11,11 +11,11 @@ const Main = () =>{
         "./src/assets/ASNI.png"
     ]
     const row2 = [
-        "../assets/DigitalIndia.png",
-        "../assets/UKAC.png",
-        "../assets/QRO.png",
-        "../assets/iqcs.png", 
-        "../assets/IAF.png"
+        "./assets/DigitalIndia.png",
+        "./assets/UKAC.png",
+        "./assets/QRO.png",
+        "./assets/iqcs.png", 
+        "./assets/IAF.png"
     ]
 
     return(
