@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
     return (
         <div className="sticky top-0 px-6 py-2 h-14 bg-slate-200 flex items-center justify-between w-full z-10">
-            <NavLink to="/" className="h-12 w-12">
+            <NavLink to="/home" className="h-12 w-12">
                 <svg className="h-10 w-10" width="57" height="70" viewBox="0 0 57 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M57 52.4205V18.0858L28.6242 0.91864L0.248291 18.0858V52.4205L28.6242 69.5877" fill="#F3F5F6"/>
                     <path d="M28.4307 10.7428L38.1118 17.2919L43.2506 31.2634L39.2228 38.9767L50.4724 43.4884L56.8609 52.2203L28.4307 69.5876L0 52.2203L6.38849 43.4884L17.6385 38.9767L13.6107 31.2634L18.7495 17.2919" fill="#2F2C4D"/>
