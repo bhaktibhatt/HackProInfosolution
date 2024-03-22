@@ -36,7 +36,7 @@ const Main = () =>{
                     <img src={ Tools } alt="" />
                 </div>
              </div>
-             <div className="w-full flex flex-col items-center my-40 gradient">
+             <div className="w-full flex flex-col items-center my-32 gradient">
                 <h3 className="pb-14 pt-20 text-5xl">Accreditations</h3>
                 <div className="w-full rounded-xl">
                     <Marquee speed={20} autoFill behavior="" direction="left">
@@ -51,7 +51,7 @@ const Main = () =>{
                     <Marquee speed={20} autoFill behavior="" direction="right">
                     <div className="flex items-center ">
                         {row2.map((im) =>(
-                        <img className="h-32 m-10" src={im}></img>
+                        <img className="h-32 mx-10" src={im}></img>
                         ))}
                     </div>
                     </Marquee>
