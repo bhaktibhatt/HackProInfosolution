@@ -9,7 +9,7 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <div className=' font-raleway '>
         <Navbar/>
        <Routes>
           <Route  exact path='/HackProInfosolution/' element={<Home/>}></Route>

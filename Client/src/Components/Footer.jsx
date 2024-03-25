@@ -2,7 +2,7 @@ import React from 'react'
 import Bg from '../assets/BackgroundHEX.png'
 const Footer = () => {
   return (
-    <div className='relative w-full'>
+    <div className='relative w-full font-raleway'>
       <img className='w-full h-2/4' src={Bg} alt="" />
       <div className='w-full absolute top-1/4'>
         <div className='flex flex-col items-center'>
