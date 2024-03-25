@@ -24,7 +24,7 @@ const Navbar = () => {
                     <path d="M48.082 39.3146C49.6047 39.3146 50.7538 38.0724 50.7538 35.8738C50.7538 33.6771 49.6047 32.4349 48.082 32.4349C46.5669 32.4349 45.4197 33.6771 45.4197 35.8738C45.4197 38.0724 46.5669 39.3146 48.082 39.3146ZM48.082 38.2342C47.2149 38.2342 46.6127 37.4893 46.6127 35.8738C46.6127 34.2602 47.2149 33.5133 48.082 33.5133C48.9567 33.5133 49.5589 34.2602 49.5589 35.8738C49.5589 37.4893 48.9567 38.2342 48.082 38.2342Z" fill="#A2B1BD"/>
                 </svg>
             </NavLink>
-            <div className="flex w-60 justify-between pr-10">
+            <div className="flex w-60 justify-between pr-10 font-semibold">
                 <NavLink to="/HackProInfosolution/about">About Us</NavLink>
                 <NavLink>Contact Us</NavLink>
             </div>
