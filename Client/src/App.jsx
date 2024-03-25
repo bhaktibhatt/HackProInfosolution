@@ -12,7 +12,7 @@ function App() {
       <div>
         <Navbar/>
        <Routes>
-          <Route  exact path='/HackProInfosolution/home' element={<Home/>}></Route>
+          <Route  exact path='/HackProInfosolution/' element={<Home/>}></Route>
           <Route exact path='/HackProInfosolution/about' element={ <About/> }></Route>
         </Routes> 
        </div>
