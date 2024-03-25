@@ -2,6 +2,7 @@ import React from "react";
 import Tools from '../assets/Tools.png'
 import image from "../assets/image.png"
 import Marquee from 'react-fast-marquee';
+import Card from "./Card.jsx";
 const Main = () =>{
     const row1 = [
         "/HackProInfosolution/src/assets/ISO.png",
@@ -25,6 +26,12 @@ const Main = () =>{
                 <button className="absolute top-2/3 left-72 bg-slate-50 px-6 py-4 rounded-2xl text-3xl text-violet-900  hover:drop-shadow-xl hover:">Enroll Now</button>
         </div>
         <div className="m-20">
+        <div className="flex flex-col">
+            <h3 className="py-10 text-5xl">Courses:</h3>
+            <div>
+                <Card></Card>
+            </div>
+            </div>
             <h3 className="py-10 text-5xl">Why is Certification Important?</h3>
             <p className="m-0 p-0 text-3xl">An individual's knowledge, abilities, and expertise in the field of cybersecurity 
             are demonstrated in concrete form by the cybersecurity certification program, which is why it is significant.
