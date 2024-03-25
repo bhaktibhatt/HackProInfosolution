@@ -1,8 +1,26 @@
 import React from "react";
-import Tools from '../assets/Tools.png'
+
 import image from "../assets/image.png"
 import Marquee from 'react-fast-marquee';
 import Card from "./Card.jsx";
+
+import aircrack from "../assets/aircrack.png"
+import nmap from "../assets/nmap.png"
+import burpsuite from "../assets/burpsuite.png"
+import wireshark from "../assets/wireshark.png"
+
+import M from "../assets/M.png"
+import nikto from "../assets/nikto.png"
+import threehead from "../assets/threehead.png"
+import hashcat from "../assets/hashcat.png"
+
+import SETK from "../assets/SETK.png"
+import beef from "../assets/beef.png"
+import green from "../assets/green.png"
+import kali from "../assets/kali.png"
+
+
+
 const Home = () =>{
     const row1 = [
         "/HackProInfosolution/src/assets/ISO.png",
@@ -45,8 +63,25 @@ const Home = () =>{
             
              <div className="my-40">
                 <h3 className="py-20 text-5xl">Tools You Learn -</h3>
-                <div className="flex justify-center">
-                    <img src={ Tools } alt="" />
+                <div className=" space-y-14">
+                    <div className="flex justify-around w-full">
+                        <img src={aircrack} alt="aircrack" />
+                        <img src={nmap} alt="nmap" />
+                        <img className="h-28" src={burpsuite} alt="burpsuite" />
+                        <img src={wireshark} alt="wireshark" />   
+                    </div>
+                    <div className="w-full flex justify-around">
+                        <img src={M} alt="M" />
+                        <img className="h-28" src={nikto} alt="nikto" />
+                        <img src={threehead} alt="dragon" />
+                        <img className="h-20" src={hashcat} alt="hashcat" />
+                    </div>
+                    <div className="flex justify-around w-full">
+                    <img className=" h-40 " src={SETK} alt="setk" />
+                        <img className="h-40" src={beef} alt="beef" />
+                        <img className=" h-40 " src={green} alt="green" />
+                        <img className="h-40" src={kali} alt="kali" />  
+                    </div>
                 </div>
              </div>
              <div className="w-full flex flex-col items-center my-32 gradient">
