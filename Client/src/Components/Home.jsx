@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import image from "../assets/image.png"
 import Marquee from 'react-fast-marquee';
@@ -41,16 +42,23 @@ const Home = () =>{
         <div>
             <div className="relative w-full">
                 <img className="w-full h-3/4" src={ image } alt="" />
-                <button className="absolute top-2/3 left-72 bg-slate-50 px-6 py-4 rounded-2xl text-3xl text-violet-900  hover:drop-shadow-xl hover:">Enroll Now</button>
+                <button className="absolute top-2/3 left-72 bg-slate-50 px-6 py-4 rounded-2xl text-3xl text-violet-900  hover:drop-shadow-xl hover:scale-105 transition-all">Enroll Now</button>
             </div>            
             <div className="m-20">
                     <div className="flex flex-col">
                     <h3 className="py-10 text-5xl">Courses:</h3>
+                    <div>
                     <div className="w-100 flex justify-around">
+                        <NavLink to="/HackProInfosolution/ehticalhackingandcybersecurity">
                         <Card ctitle="Ethical Hacking & Cyber Security" cdes="Ethical Hacking & Cyber security will teach you the latest commercial-grade hacking tools, techniques and methodologies used by hackers and information security professionals to lawfully hack an organization."/>
+                        </NavLink>
                         <Card ctitle="Certified Penetration Testing" cdes="Delve into understanding how hackers breach operating systems and circumvent antivirus measures. By adopting hackers' strategies and approaches, you'll uncover vulnerabilities within your network. "></Card>
                         <Card ctitle ="Cyber Forensic Investigation" cdes="Gain in-depth knowledge in the field of Cyber Forensics & Crime.Use investigation tools and techniques for analysis of data to identify evidence, Technical Aspects & Legal Aspects related to cyber crime."></Card>
+                    </div>
+                    <div className="w-100 flex justify-center mt-20 space-x-24">
                         <Card ctitle="Certified Bug Bounty Hunting" cdes="Learn to identify, report, and mitigate software vulnerabilities. Gain recognition and compensation by uncovering security flaws in websites, organizations, and software applications."></Card>
+                        <Card ctitle="Computer Networks" cdes="Learn to identify, report, and mitigate software vulnerabilities. Gain recognition and compensation by uncovering security flaws in websites, organizations, and software applications."></Card>
+                    </div>
                     </div>
                 </div>
             <div className="mt-40">
