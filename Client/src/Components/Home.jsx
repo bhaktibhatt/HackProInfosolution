@@ -21,22 +21,19 @@ import green from "../assets/green.png"
 import kali from "../assets/kali.png"
 
 
+import ISO from "../assets/ISO.png"
+import MSME from "../assets/MSME.png"
+import skillindia from "../assets/SkillIndia.png"
+import CNI from "../assets/CNI.png"
+import ASNI from "../assets/ASNI.png"
+
+import DigitalIndia from "../assets/DigitalIndia.png"
+import UKAC from "../assets/UKAC.png"
+import QRO from "../assets/QRO.png"
+import iqcs from "../assets/iqcs.png"
+import IAF from "../assets/IAF.png"
 
 const Home = () =>{
-    const row1 = [
-        "/HackProInfosolution/src/assets/ISO.png",
-        "/HackProInfosolution/src/assets/MSME.png",
-        "/HackProInfosolution/src/assets/SkillIndia.png",
-        "/HackProInfosolution/src/assets/CNI.png",
-        "/HackProInfosolution/src/assets/ASNI.png"
-    ]
-    const row2 = [
-        "/HackProInfosolution/src/assets/DigitalIndia.png",
-        "/HackProInfosolution/src/assets/UKAC.png",
-        "/HackProInfosolution/src/assets/QRO.png",
-        "/HackProInfosolution/src/assets/iqcs.png", 
-        "/HackProInfosolution/src/assets/IAF.png"
-    ]
 
     return(
         <div>
@@ -85,7 +82,7 @@ const Home = () =>{
                         <img className="h-20" src={hashcat} alt="hashcat" />
                     </div>
                     <div className="flex justify-around w-full">
-                    <img className=" h-40 " src={SETK} alt="setk" />
+                        <img className=" h-40 " src={SETK} alt="setk" />
                         <img className="h-40" src={beef} alt="beef" />
                         <img className=" h-40 " src={green} alt="green" />
                         <img className="h-40" src={kali} alt="kali" />  
@@ -94,21 +91,21 @@ const Home = () =>{
              </div>
              <div className="w-full flex flex-col items-center my-32 gradient">
                 <h3 className="pb-14 pt-20 text-5xl">Accreditations</h3>
-                <div className="w-full rounded-xl">
-                    <Marquee speed={20} autoFill behavior="" direction="left">
-                    <div className="flex flex-row ">
-                        <div className=" flex items-center">
-                            {row1.map((im) =>(
-                                <img className="h-32 m-10" src={im}></img>
-                            ))}
-                        </div>
-                    </div>
+                <div className="w-full rounded-xl space-y-14">
+                    <Marquee speed={20} autoFill behavior="" direction="left"> 
+                        <img className="h-32 mx-10" src={ISO} alt="setk" />
+                        <img className="h-32 mx-10" src={MSME} alt="beef" />
+                        <img className="h-32 mx-10" src={skillindia} alt="green" />
+                        <img className="h-32 mx-10" src={CNI} alt="kali" />  
+                        <img className="h-32 mx-10" src={ASNI} alt="kali" />  
                     </Marquee>
                     <Marquee speed={20} autoFill behavior="" direction="right">
                     <div className="flex items-center ">
-                        {row2.map((im) =>(
-                        <img className="h-32 mx-10" src={im}></img>
-                        ))}
+                        <img className="h-32 mx-10" src={DigitalIndia} alt="setk" />
+                        <img className="h-32 mx-10" src={UKAC} alt="beef" />
+                        <img className="h-32 mx-10" src={QRO} alt="green" />
+                        <img className="h-32 mx-10" src={iqcs} alt="kali" />  
+                        <img className="h-32 mx-10" src={IAF} alt="kali" />  
                     </div>
                     </Marquee>
                 </div>
