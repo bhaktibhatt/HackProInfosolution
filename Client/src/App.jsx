@@ -10,6 +10,7 @@ import Pentesting from './pages/Pentesting.jsx'
 import Cyberforensics from './pages/Cyberforensics.jsx'
 import Bugbounty from './pages/Bugbounty.jsx'
 import Computernetwork from './pages/Computernetwork.jsx'
+import Registerationform from './pages/Registerationform.jsx' 
 function App() {
 
   return (
@@ -24,7 +25,7 @@ function App() {
           <Route  exact path='/HackProInfosolution/cyberforensics' element={<Cyberforensics/>}></Route>
           <Route  exact path='/HackProInfosolution/bugbounty' element={<Bugbounty/>}></Route>
           <Route  exact path='/HackProInfosolution/computernetwork' element={<Computernetwork/>}></Route>
-
+          <Route exact path='/HackProInfosolution/registerationform' element={<Registerationform/>}></Route>
         </Routes> 
        </div>
        {/* <Home/> */}
