@@ -5,20 +5,32 @@ import About from "./pages/About.jsx"
 import Home from "./Components/Home.jsx"
 import Footer from './Components/Footer.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Ethicalhacking from './pages/Ethicalhacking.jsx'
+import Pentesting from './pages/Pentesting.jsx'
+import Cyberforensics from './pages/Cyberforensics.jsx'
+import Bugbounty from './pages/Bugbounty.jsx'
+import Computernetwork from './pages/Computernetwork.jsx'
+import Registerationform from './pages/Registerationform.jsx' 
 function App() {
 
   return (
     <Router>
-      <div>
+      <div className=' font-raleway '>
         <Navbar/>
        <Routes>
-          <Route  exact path='/home' element={<Home/>}></Route>
-          <Route exact path='/about' element={ <About/> }></Route>
+          <Route  exact path='/HackProInfosolution/' element={<Home/>}></Route>
+          <Route exact path='/HackProInfosolution/about' element={ <About/> }></Route>
+          <Route exact path='/HackProInfosolution/ehticalhackingandcybersecurity' element={<Ethicalhacking/>}></Route>
+          <Route exact path='/HackProInfosolution/pentesting' element={<Pentesting/>}></Route>
+          <Route  exact path='/HackProInfosolution/cyberforensics' element={<Cyberforensics/>}></Route>
+          <Route  exact path='/HackProInfosolution/bugbounty' element={<Bugbounty/>}></Route>
+          <Route  exact path='/HackProInfosolution/computernetwork' element={<Computernetwork/>}></Route>
+          <Route exact path='/HackProInfosolution/registerationform' element={<Registerationform/>}></Route>
         </Routes> 
        </div>
-       <Home/>
+       {/* <Home/> */}
        <Footer/>
-      </Router>
+    </Router>
   )
 }
 

@@ -16,6 +16,8 @@ An individual's knowledge, abilities, and expertise in the field of cybersecurit
 1. ExpressJS - v4.18.3
 1. ReactJS - v18.2.0
 1. ReactJS-dom - v18.2.0
+1. React-Router-dom - v6.22.3
+1. React-fast-marquee: v1.6.4
 1. TailwindCSS - v3.4.1
 1. PostCSS - v8.4.35
 1. Nodemon - v3.1.0  
