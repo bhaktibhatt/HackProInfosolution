@@ -18,14 +18,14 @@ function App() {
       <div className=' font-raleway '>
         <Navbar/>
        <Routes>
-          <Route  exact path='/HackProInfosolution/' element={<Home/>}></Route>
-          <Route exact path='/HackProInfosolution/about' element={ <About/> }></Route>
-          <Route exact path='/HackProInfosolution/ehticalhackingandcybersecurity' element={<Ethicalhacking/>}></Route>
-          <Route exact path='/HackProInfosolution/pentesting' element={<Pentesting/>}></Route>
-          <Route  exact path='/HackProInfosolution/cyberforensics' element={<Cyberforensics/>}></Route>
-          <Route  exact path='/HackProInfosolution/bugbounty' element={<Bugbounty/>}></Route>
-          <Route  exact path='/HackProInfosolution/computernetwork' element={<Computernetwork/>}></Route>
-          <Route exact path='/HackProInfosolution/registerationform' element={<Registerationform/>}></Route>
+          <Route  exact path='/' element={<Home/>}></Route>
+          <Route exact path='/about' element={ <About/> }></Route>
+          <Route exact path='/ehticalhackingandcybersecurity' element={<Ethicalhacking/>}></Route>
+          <Route exact path='/pentesting' element={<Pentesting/>}></Route>
+          <Route  exact path='/cyberforensics' element={<Cyberforensics/>}></Route>
+          <Route  exact path='/bugbounty' element={<Bugbounty/>}></Route>
+          <Route  exact path='/computernetwork' element={<Computernetwork/>}></Route>
+          <Route exact path='/registerationform' element={<Registerationform/>}></Route>
         </Routes> 
        </div>
        {/* <Home/> */}
