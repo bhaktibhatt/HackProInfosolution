@@ -24,6 +24,7 @@ app.get('/registrations', async(req, res) => {
 })
 
 
+
 app.listen(port, () => {
     console.log(`server has started! at port 5000. http://localhost:${port}/`)
 })
