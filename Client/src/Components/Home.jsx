@@ -48,19 +48,19 @@ const Home = () =>{
                     <div className="w-100 flex justify-around">
                         <Marquee className="py-10 gradient overflow-hidden" pauseOnHover="true" speed={50} behavior="" direction="left">
 
-                        <NavLink to="/HackProInfosolution/ehticalhackingandcybersecurity">
+                        <NavLink to="/ehticalhackingandcybersecurity">
                         <Card ctitle="Ethical Hacking & Cyber Security" cdes="Ethical Hacking & Cyber security will teach you the latest commercial-grade hacking tools, techniques and methodologies used by hackers and information security professionals to lawfully hack an organization."/>
                         </NavLink>
-                        <NavLink to="/HackProInfosolution/pentesting">
+                        <NavLink to="/pentesting">
                         <Card ctitle="Certified Penetration Testing" cdes="Delve into understanding how hackers breach operating systems and circumvent antivirus measures. By adopting hackers' strategies and approaches, you'll uncover vulnerabilities within your network. "></Card>
                         </NavLink>
-                        <NavLink to="/HackProInfosolution/cyberforensics">
+                        <NavLink to="/cyberforensics">
                         <Card ctitle ="Cyber Forensic Investigation" cdes="Gain in-depth knowledge in the field of Cyber Forensics & Crime.Use investigation tools and techniques for analysis of data to identify evidence, Technical Aspects & Legal Aspects related to cyber crime."></Card>
                         </NavLink>
-                        <NavLink to="/HackProInfosolution/bugbounty">
+                        <NavLink to="/bugbounty">
                         <Card ctitle="Certified Bug Bounty Hunting" cdes="Learn to identify, report, and mitigate software vulnerabilities. Gain recognition and compensation by uncovering security flaws in websites, organizations, and software applications."></Card>
                         </NavLink>
-                        <NavLink to="/HackProInfosolution/computernetwork">
+                        <NavLink to="/computernetwork">
                         <Card ctitle="Computer Networks" cdes="Learn to identify, report, and mitigate software vulnerabilities. Gain recognition and compensation by uncovering security flaws in websites, organizations, and software applications."></Card>
                         </NavLink>
                         </Marquee>

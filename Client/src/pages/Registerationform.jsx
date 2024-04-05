@@ -16,23 +16,50 @@ const Registerationform = () => {
           </div>
           <div className='flex w-full justify-around '>
             <input className='border rounded-md border-violet-500 p-2 w-72' type="text" value={"Contact"} required/>
-            <input className='border rounded-md border-violet-500 p-2 w-72' type="email" value={"Courses"} required/>
+            <div className='relative'>
+              <select className='border rounded-md border-violet-500 p-2 pr-12 w-72 appearance-none bg-transparent bg-no-repeat bg-right bg-contain' value={"Courses"} required id="">
+              <option value="">--Select Course--</option>
+                <option value="CEH">Ethical Hacking and Cyber Security</option>
+                <option value="CF">Cyber Forensics</option>
+                <option value="PT">Pentration Testing</option>
+                <option value="BB">Bug Bounty</option>
+                <option value="CN">Computer Network</option>  
+              </select>
+              <div className='absolute top-3 right-3 pointer-events-none'>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </div>
+            </div>
           </div>
         </div>
         <div>
           <h3 className='text-2xl pt-10'>Educational Details:</h3>
           <div className='flex w-full justify-around mt-10 mb-10'>
-            <input className='border rounded-md border-violet-500 p-2 w-72' type="text" value={"highest level of education"} required/>
+          <div className='relative'>
+              <select className='border rounded-md border-violet-500 p-2 pr-12 w-72 appearance-none bg-transparent bg-no-repeat bg-right bg-contain'  required id="">
+                <option value="">--highest level of education--</option>
+                <option value="PG">Graduate</option>
+                <option value="UG">Undergraduate</option>
+                <option value="12th">12th</option>
+                <option value="10th">10th</option>
+              </select>
+              <div className='absolute top-3 right-3 pointer-events-none'>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </div>
+          </div>
             <input className='border rounded-md border-violet-500 p-2 w-72' type="email" value={"name of institute/university/college/school"} required/>
           </div>
         </div>
         <div >
-          <h3>Mode of Education</h3>
-          <div className='flex'>
-          <input type="radio" name="Online" value={"Online"} id="" /><b>Online</b>
+          <h3>Mode of Instruction</h3>
+          <div className='flex items-center gap-x-2' >
+          <input type="radio" name="MODE" value={"Online"} id="" /><b>Online</b>
           </div>
-          <div className='flex'>
-          <input type="radio" name="Offline" value={"Online"} id="" /><b>Offline</b>
+          <div className='flex items-center gap-x-2'>
+          <input type="radio" name="MODE" value={"Offline"} id="" /><b>Offline</b>
           </div>
         </div>
         <div className='flex items-center w-full justify-center'>
