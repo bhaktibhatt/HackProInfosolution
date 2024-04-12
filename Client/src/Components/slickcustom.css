@@ -1,4 +1,6 @@
-
+.slick-slide {
+    padding:10px 0px 30px 0px;
+}
 .slick-slide div{
     margin-left:0 1rem;
 }
