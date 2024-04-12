@@ -1,4 +1,5 @@
 const express = require("express")
+const mongoose = require("mongoose")
 const app = express()
 const cors = require("cors")
 const port = 3000
@@ -7,26 +8,13 @@ app.use(express.json())
 app.use(express.static(__dirname + '/'));
 app.use(cors())
 
-const users = [
-    {
-        name : "prathmesh",
-        age : 21,
-        email : "prathmesh@email.com"
-    },
-    {
-        name : "bhakti",
-        age : 22,
-        email : "bhakti@email.com"
-    },
-    {
-        name : "khushi",
-        age : 20,
-        email : "khushi@email.com"
-    },
-]
+mongoose.connect("mongodb+srv://hackpro:hackpropassword@hi-db.d9e3qvw.mongodb.net/HI-DB")
+const Registrations = require("./userModal");
 
-app.get('/api', async(req, res) => {
+app.get('/registrations', async(req, res) => {
     try {
+        let users = await Registrations.find()
+        console.log(users);
         res.status(200)
         res.json(users)
     } catch (err) {
@@ -34,6 +22,7 @@ app.get('/api', async(req, res) => {
         console.error(err.message)
     }
 })
+
 
 
 app.listen(port, () => {
