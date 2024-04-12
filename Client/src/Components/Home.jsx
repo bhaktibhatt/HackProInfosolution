@@ -1,9 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import image from "../assets/image.png"
 import Marquee from 'react-fast-marquee';
 import Card from "./Card.jsx";
+import './slickcustom.css';
 
 import aircrack from "../assets/aircrack.png"
 import nmap from "../assets/nmap.png"
@@ -33,7 +36,51 @@ import QRO from "../assets/QRO.png"
 import iqcs from "../assets/iqcs.png"
 import IAF from "../assets/IAF.png"
 
+<<<<<<< Updated upstream
 const Home = () => {
+=======
+
+function Arrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, color:"black"}}
+      onClick={onClick}
+    />
+  );
+}
+const Home = () =>{
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    nextArrow: <Arrow />,
+    prevArrow: <Arrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+    ]
+  };
+>>>>>>> Stashed changes
 
     return (
         <div>
@@ -47,6 +94,7 @@ const Home = () => {
                 <div className="flex flex-col">
                     <h3 className="py-10 text-3xl lg:text-5xl">Courses:</h3>
                     <div>
+<<<<<<< Updated upstream
                         <div className="w-100 flex justify-around">
                             <Marquee className="py-10 gradient overflow-hidden" pauseOnHover="true" speed={50} behavior="" direction="left">
 
@@ -122,6 +170,34 @@ const Home = () => {
                         </Marquee>
                     </div>
                 </div>
+=======
+                    <Slider {...settings}>
+                        <NavLink to="/ehticalhackingandcybersecurity">
+                        <Card ctitle="Ethical Hacking & Cyber Security" cdes="Ethical Hacking & Cyber security will teach you the latest commercial-grade hacking tools, techniques and methodologies used by hackers and information security professionals to lawfully hack an organization."/>
+                        </NavLink>
+                        <NavLink to="/pentesting">
+                        <Card ctitle="Certified Penetration Testing" cdes="Delve into understanding how hackers breach operating systems and circumvent antivirus measures. By adopting hackers' strategies and approaches, you'll uncover vulnerabilities within your network. "></Card>
+                        </NavLink>
+                        <NavLink to="/cyberforensics">
+                        <Card ctitle ="Cyber Forensic Investigation" cdes="Gain in-depth knowledge in the field of Cyber Forensics & Crime.Use investigation tools and techniques for analysis of data to identify evidence, Technical Aspects & Legal Aspects related to cyber crime."></Card>
+                        </NavLink>
+                        <NavLink to="/bugbounty">
+                        <Card ctitle="Certified Bug Bounty Hunting" cdes="Learn to identify, report, and mitigate software vulnerabilities. Gain recognition and compensation by uncovering security flaws in websites, organizations, and software applications."></Card>
+                        </NavLink>
+                        <NavLink to="/computernetwork">
+                        <Card ctitle="Computer Networks" cdes="Learn to identify, report, and mitigate software vulnerabilities. Gain recognition and compensation by uncovering security flaws in websites, organizations, and software applications."></Card>
+                        </NavLink>
+                    </Slider>
+                    
+                    </div>
+                </div>
+            <div className="mt-4 lg:mt-20">
+                <h3 className="py-10 text-3xl lg:text-5xl">Why is Certification Important?</h3>
+                <p className="m-0 p-0 text-xl lg:text-3xl">An individual's knowledge, abilities, and expertise in the field of cybersecurity 
+            are demonstrated in concrete form by the cybersecurity certification program, which is why it is significant.
+             It can assist people progress in their careers at their current companies as well as help them differentiate themselves from other applicants on the job market.
+             When recruiting or elevating cybersecurity specialists, employers frequently need or favour certificates.</p>
+>>>>>>> Stashed changes
             </div>
         </div>
 
