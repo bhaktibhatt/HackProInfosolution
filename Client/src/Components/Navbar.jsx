@@ -2,9 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
     return (
-        <div className="sticky top-0 px-6 py-2 h-14 bg-slate-200 flex items-center justify-between w-full z-10">
+        <div className="sticky top-0 px-[24px] py-[8px] h-[56px] bg-slate-200 flex items-center justify-between w-full z-10">
             <NavLink to="/" className="h-12 w-12">
-                <svg className="h-10 w-10" width="57" height="70" viewBox="0 0 57 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="h-[40px] w-[40px]" width="57" height="70" viewBox="0 0 57 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M57 52.4205V18.0858L28.6242 0.91864L0.248291 18.0858V52.4205L28.6242 69.5877" fill="#F3F5F6"/>
                     <path d="M28.4307 10.7428L38.1118 17.2919L43.2506 31.2634L39.2228 38.9767L50.4724 43.4884L56.8609 52.2203L28.4307 69.5876L0 52.2203L6.38849 43.4884L17.6385 38.9767L13.6107 31.2634L18.7495 17.2919" fill="#2F2C4D"/>
                     <path d="M28.4307 10.7428L38.1118 17.2919L43.2506 31.2634L39.2228 38.9767L50.4724 43.4884L56.8609 52.2203L28.4307 69.5876L0 52.2203L6.38849 43.4884L17.6385 38.9767L13.6107 31.2634L18.7495 17.2919" fill="#2F2C4D"/>
@@ -24,7 +24,7 @@ const Navbar = () => {
                     <path d="M48.082 39.3146C49.6047 39.3146 50.7538 38.0724 50.7538 35.8738C50.7538 33.6771 49.6047 32.4349 48.082 32.4349C46.5669 32.4349 45.4197 33.6771 45.4197 35.8738C45.4197 38.0724 46.5669 39.3146 48.082 39.3146ZM48.082 38.2342C47.2149 38.2342 46.6127 37.4893 46.6127 35.8738C46.6127 34.2602 47.2149 33.5133 48.082 33.5133C48.9567 33.5133 49.5589 34.2602 49.5589 35.8738C49.5589 37.4893 48.9567 38.2342 48.082 38.2342Z" fill="#A2B1BD"/>
                 </svg>
             </NavLink>
-            <div className="flex w-60 justify-between pr-10 font-semibold">
+            <div className="flex w-[240px] justify-between pr-[40px] font-semibold">
                 <NavLink to="/about">About Us</NavLink>
                 <NavLink>Contact Us</NavLink>
             </div>

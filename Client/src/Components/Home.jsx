@@ -81,12 +81,12 @@ const Home = () =>{
     return(
         <div>
             <div className="relative w-full">
-                <img className="w-full h-3/4" src={ image } alt="" />
-                <button className="absolute lg:top-2/3 lg:left-72 left-14 top-36 bg-slate-50 py-1 px-2 lg:px-6 lg:py-4 rounded-xl lg:rounded2xl lg:text-3xl text-violet-900  hover:drop-shadow-xl hover:scale-105 transition-all">Enroll Now</button>
+                <img className="w-full" src={ image } alt="" />
+                <button className="absolute lg:top-2/3 lg:left-[300px] left-[56px] top-[144px] bg-slate-50 py-[4px] px-[8px] lg:px-[24px] lg:py-[16px] rounded-[12px] lg:rounded-[16px] lg:text-[30px] text-violet-900  hover:drop-shadow-xl hover:scale-105 transition-all">Enroll Now</button>
             </div>            
-            <div className="lg:m-20 m-10">
+            <div className="lg:m-[80px] m-[40px]">
                     <div className="flex flex-col">
-                    <h3 className="py-10 text-3xl lg:text-5xl">Courses:</h3>
+                    <h3 className="py-[40px] text-[30px] lg:text-[50px">Courses:</h3>
                     <div>
                     <Slider {...settings}>
                         <NavLink to="/ethicalhackingandcybersecurity">
@@ -108,54 +108,50 @@ const Home = () =>{
                     
                     </div>
                 </div>
-            <div className="mt-20 lg:mt-40">
-                <h3 className="py-10 text-3xl lg:text-5xl">Why is Certification Important?</h3>
+            <div className="mt-[80px] lg:mt-[160px">
+                <h3 className="py-[40px] text-[30px] lg:text-[50px]">Why is Certification Important?</h3>
                 <p className="m-0 p-0 text-xl lg:text-3xl">An individual's knowledge, abilities, and expertise in the field of cybersecurity 
             are demonstrated in concrete form by the cybersecurity certification program, which is why it is significant.
              It can assist people progress in their careers at their current companies as well as help them differentiate themselves from other applicants on the job market.
              When recruiting or elevating cybersecurity specialists, employers frequently need or favour certificates.</p>
             </div>
             
-             <div className="my-20 lg:my-40 w-full">
-                <h3 className="py-2 text-3xl lg:text-5xl">Tools You Learn -</h3>
-                <div className="space-y-14 scale-50 lg:scale-90">
-                    <div className="flex justify-around ">
-                        <img className="h-20 lg:28" src={aircrack} alt="aircrack" />
-                        <img className="h-20 lg:28" src={nmap} alt="nmap" />
-                        <img className="h-20 lg:28" src={burpsuite} alt="burpsuite" />
-                        <img className="h-20 lg:28" src={wireshark} alt="wireshark" />   
-                    </div>
-                    <div className="w-full flex items-center justify-around">
-                        <img src={M} alt="M" />
-                        <img className="h-28" src={nikto} alt="nikto" />
-                        <img src={threehead} alt="dragon" />
-                        <img className="h-20" src={hashcat} alt="hashcat" />
-                    </div>
-                    <div className="flex items-center justify-around w-full">
-                        <img className="h-28" src={SETK} alt="setk" />
-                        <img className="h-28" src={beef} alt="beef" />
-                        <img className="h-28" src={green} alt="green" />
-                        <img className="h-28" src={kali} alt="kali" />  
+             <div className="my-[80px] lg:my-[160px] w-full">
+                <h3 className="py-2 text-[30px] lg:text-[50px]">Tools You Learn -</h3>
+                <div className="w-full space-y-[56px]">
+                    <div className="flex justify-around items-center flex-wrap gap-[20px] lg:gap-[20px]">
+                        <img className=" lg:p-[10px] h-[40px] lg:h-28" src={aircrack} alt="aircrack" />
+                        <img className=" lg:p-[10px] h-[40px] lg:h-28" src={nmap} alt="nmap" />
+                        <img className=" lg:p-[10px] h-[40px] lg:h-28" src={burpsuite} alt="burpsuite" />
+                        <img className=" lg:p-[10px] h-[40px] lg:h-28" src={wireshark} alt="wireshark" />   
+                        <img className=" lg:p-[10px] h-[60px] lg:h-28" src={M} alt="M" />
+                        <img className=" lg:p-[10px] h-[60px] lg:h-28" src={nikto} alt="nikto" />
+                        <img className=" lg:p-[10px] h-[60px] lg:h-28" src={threehead} alt="dragon" />
+                        <img className=" lg:p-[10px] h-[40px] lg:h-[60px]" src={hashcat} alt="hashcat" />
+                        <img className=" lg:p-[10px] h-[60px] lg:h-28" src={SETK} alt="setk" />
+                        <img className=" lg:p-[10px] h-[60px] lg:h-28" src={beef} alt="beef" />
+                        <img className=" lg:p-[10px] h-[60px] lg:h-28" src={green} alt="green" />
+                        <img className=" lg:p-[10px] h-[70px] lg:h-28" src={kali} alt="kali" />  
                     </div>
                 </div>
              </div>
-             <div className="w-full flex flex-col items-center my-14 lg:my-32 gradient">
-                <h3 className="pb-14 pt-10 text-5xl">Accreditations</h3>
-                <div className="w-full rounded-xl space-y-14">
+             <div className="w-full flex flex-col items-center my-[56px] lg:my-[128px]">
+                <h3 className="pb-[56px] pt-[40px] text-[30px] lg:[50px]">Accreditations</h3>
+                <div className="w-full rounded-[12px] space-y-[56px] gradient">
                     <Marquee speed={20} autoFill behavior="" direction="left"> 
-                        <img className="h-24 mx-5 lg:h-32 lg:mx-10" src={ISO} alt="setk" />
-                        <img className="h-24 mx-5 lg:h-32 lg:mx-10" src={MSME} alt="beef" />
-                        <img className="h-24 mx-5 lg:h-32 lg:mx-10" src={skillindia} alt="green" />
-                        <img className="h-24 mx-5 lg:h-32 lg:mx-10" src={CNI} alt="kali" />  
-                        <img className="h-24 mx-5 lg:h-32 lg:mx-10" src={ASNI} alt="kali" />  
+                        <img className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]" src={ISO} alt="setk" />
+                        <img className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]" src={MSME} alt="beef" />
+                        <img className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]" src={skillindia} alt="green" />
+                        <img className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]" src={CNI} alt="kali" />  
+                        <img className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]" src={ASNI} alt="kali" />  
                     </Marquee>
                     <Marquee speed={20} autoFill behavior="" direction="right">
                     <div className="flex items-center ">
-                        <img className="h-24 mx-5 lg:h-32 lg:mx-10" src={DigitalIndia} alt="setk" />
-                        <img className="h-24 mx-5 lg:h-32 lg:mx-10" src={UKAC} alt="beef" />
-                        <img className="h-24 mx-5 lg:h-32 lg:mx-10" src={QRO} alt="green" />
-                        <img className="h-24 mx-5 lg:h-32 lg:mx-10" src={iqcs} alt="kali" />  
-                        <img className="h-24 mx-5 lg:h-32 lg:mx-10" src={IAF} alt="kali" />  
+                        <img className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]" src={DigitalIndia} alt="setk" />
+                        <img className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]" src={UKAC} alt="beef" />
+                        <img className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]" src={QRO} alt="green" />
+                        <img className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]" src={iqcs} alt="kali" />  
+                        <img className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]" src={IAF} alt="kali" />  
                     </div>
                     </Marquee>
                 </div>
