@@ -9,11 +9,19 @@ const userSchema = new mongoose.Schema({
         type : String,
         required : true
     },
-    contactnumber : {
+    contact : {
         type : Number,
         required : true
     },
     education : {
+        type : String,
+        required : true
+    },
+    university : {
+        type : String,
+        required : true
+    },
+    course : {
         type : String,
         required : true
     },
