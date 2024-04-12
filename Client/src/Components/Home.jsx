@@ -89,7 +89,7 @@ const Home = () =>{
                     <h3 className="py-10 text-3xl lg:text-5xl">Courses:</h3>
                     <div>
                     <Slider {...settings}>
-                        <NavLink to="/ehticalhackingandcybersecurity">
+                        <NavLink to="/ethicalhackingandcybersecurity">
                         <Card ctitle="Ethical Hacking & Cyber Security" cdes="Ethical Hacking & Cyber security will teach you the latest commercial-grade hacking tools, techniques and methodologies used by hackers and information security professionals to lawfully hack an organization."/>
                         </NavLink>
                         <NavLink to="/pentesting">
