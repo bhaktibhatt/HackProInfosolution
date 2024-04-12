@@ -37,16 +37,6 @@ import iqcs from "../assets/iqcs.png"
 import IAF from "../assets/IAF.png"
 
 
-function Arrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, color:"black"}}
-      onClick={onClick}
-    />
-  );
-}
 const Home = () =>{
   var settings = {
     dots: false,
@@ -55,8 +45,6 @@ const Home = () =>{
     slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
-    nextArrow: <Arrow />,
-    prevArrow: <Arrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -88,7 +76,7 @@ const Home = () =>{
             </div>            
             <div className="lg:m-[80px] m-[40px]">
                     <div className="flex flex-col">
-                    <h3 className="py-[40px] text-[30px] lg:text-[50px">Courses:</h3>
+                    <h3 className="py-[40px] text-[30px] lg:text-[50px]">Courses:</h3>
                     <div>
                     <Slider {...settings}>
                         <NavLink to="/ethicalhackingandcybersecurity">
@@ -110,7 +98,7 @@ const Home = () =>{
                     
                     </div>
                 </div>
-            <div className="mt-[80px] lg:mt-[160px">
+            <div className="mt-[80px] lg:mt-[160px]">
                 <h3 className="py-[40px] text-[30px] lg:text-[50px]">Why is Certification Important?</h3>
                 <p className="m-0 p-0 text-xl lg:text-3xl">An individual's knowledge, abilities, and expertise in the field of cybersecurity 
             are demonstrated in concrete form by the cybersecurity certification program, which is why it is significant.
