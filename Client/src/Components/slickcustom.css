@@ -1,6 +1,9 @@
-.slick-slide {
+/* .slick-slide {
     padding-top:10px;
     margin-right: 10px;
+} */
+.slick-slide div{
+    margin-left:0 1rem;
 }
 .slick-prev::before,.slick-next::before{
    color:black;
@@ -9,7 +12,11 @@
     }
 
 
-    .slick-prev, .slick-next {
-        top:25%;
-    }
+.slick-prev, .slick-next {
+       /* top:25%; */
+ }
 
+@media screen and (max-width:500px){
+    
+    
+}
