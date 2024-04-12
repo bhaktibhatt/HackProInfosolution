@@ -1,7 +1,4 @@
-/* .slick-slide {
-    padding-top:10px;
-    margin-right: 10px;
-} */
+
 .slick-slide div{
     margin-left:0 1rem;
 }
@@ -10,13 +7,3 @@
    height:20px;
    width:20px;
     }
-
-
-.slick-prev, .slick-next {
-       /* top:25%; */
- }
-
-@media screen and (max-width:500px){
-    
-    
-}
