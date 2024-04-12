@@ -82,7 +82,9 @@ const Home = () =>{
         <div>
             <div className="relative w-full">
                 <img className="w-full h-3/4" src={ image } alt="" />
-                <button className="absolute lg:top-2/3 lg:left-72 left-14 top-36 bg-slate-50 py-1 px-2 lg:px-6 lg:py-4 rounded-xl lg:rounded2xl lg:text-3xl text-violet-900  hover:drop-shadow-xl hover:scale-105 transition-all">Enroll Now</button>
+                <NavLink to="/registrationform">
+                    <button className="absolute lg:top-2/3 lg:left-72 left-14 top-36 bg-slate-50 py-1 px-2 lg:px-6 lg:py-4 rounded-xl lg:rounded2xl lg:text-3xl text-violet-900  hover:drop-shadow-xl hover:scale-105 transition-all">Enroll Now</button>
+                </NavLink>
             </div>            
             <div className="lg:m-20 m-10">
                     <div className="flex flex-col">
