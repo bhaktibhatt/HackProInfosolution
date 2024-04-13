@@ -60,10 +60,10 @@ const Registrationform = () => {
                     <div >
                         <h3>Mode of Instruction :</h3>
                         <div className='flex items-center gap-x-[8px]' >
-                            <input type="radio" name="MODE" value={"Online"} id='online' /><label><b>Online</b></label>
+                            <input type="radio" name="MODE" value={"Online"} id='online' /><label htmlFor="online"><b>Online</b></label>
                         </div>
                         <div className='flex items-center gap-x-[8px]'>
-                            <input type="radio" name="MODE" value={"Offline"} id='offline' /><label><b>Offline</b></label>
+                            <input type="radio" name="MODE" value={"Offline"} id='offline' /><label htmlFor="offline"><b>Offline</b></label>
                         </div>
                     </div>
                     <div className='flex items-center w-full justify-center mt-[20px]'>
