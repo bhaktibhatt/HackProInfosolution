@@ -29,7 +29,7 @@ const Registrationform = () => {
                                     <option value="BB">Bug Bounty</option>
                                     <option value="CN">Computer Network</option>
                                 </select>
-                                <div className='absolute  top-[12px] right-[12px] pointer-events-none'>
+                                <div className='absolute top-[12px] right-[12px] pointer-events-none'>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-[16px] h-[16px]">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -60,10 +60,10 @@ const Registrationform = () => {
                     <div >
                         <h3>Mode of Instruction :</h3>
                         <div className='flex items-center gap-x-[8px]' >
-                            <input type="radio" name="MODE" value={"Online"} id='online' /><label for="online"><b>Online</b></label>
+                            <input type="radio" name="MODE" value={"Online"} id='online' /><label><b>Online</b></label>
                         </div>
                         <div className='flex items-center gap-x-[8px]'>
-                            <input type="radio" name="MODE" value={"Offline"} id='offline' /><label for="offline"><b>Offline</b></label>
+                            <input type="radio" name="MODE" value={"Offline"} id='offline' /><label><b>Offline</b></label>
                         </div>
                     </div>
                     <div className='flex items-center w-full justify-center mt-[20px]'>

@@ -11,11 +11,13 @@ import Cyberforensics from './pages/Cyberforensics.jsx'
 import Bugbounty from './pages/Bugbounty.jsx'
 import Computernetwork from './pages/Computernetwork.jsx'
 import Registrationform from './pages/Registrationform.jsx'
+import ScrollToTop from './Components/ScrollToTop.js'
 function App() {
 
     return (
         <Router>
             <div className=' font-raleway '>
+                <ScrollToTop/>
                 <Navbar/>
                 <Routes>
                     <Route exact path='/' element={<Home />}></Route>
@@ -25,7 +27,7 @@ function App() {
                     <Route exact path='/cyberforensics' element={<Cyberforensics />}></Route>
                     <Route exact path='/bugbounty' element={<Bugbounty />}></Route>
                     <Route exact path='/computernetwork' element={<Computernetwork />}></Route>
-                    <Route exact path='/registrationform' element={<Registrationform />}></Route>
+                    <Route exact path='/registrationform' element={<Registrationform/>}></Route>
                 </Routes>
             </div>
             <Footer />
