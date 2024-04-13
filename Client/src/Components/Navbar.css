@@ -1,0 +1,21 @@
+.NavLink:hover > span,
+a:hover > span {
+  width: 100%;
+  border-color: #DC2626; /* Change to desired color */
+}
+@keyframes borderExpand {
+    0% {
+      transform: scaleX(0); /* Start with no width (scaled to 0) */
+      transform-origin: left; /* Scale from the left */
+    }
+    100% {
+      transform: scaleX(1); /* End with full width (scaled to 1) */
+      transform-origin: left; /* Scale from the left */
+    }
+  }
+  
+  /* Apply animation to the border on hover */
+  .NavLink > span,
+  a > span {
+    animation: borderExpand 0.3s ease-out forwards; /* Use the defined animation */
+  }
