@@ -13,7 +13,7 @@ const Ethicalhacking = () => {
                     <p>This beginner-friendly course focuses on core basics for someone putting their foot for the first time in cybersecurity and ethical hacking. Concepts like footprinting, networking, DNS, etc., will be covered.</p>
                     <div className='w-full flex items-center justify-center'>
                         <NavLink to="/registrationform" >
-                            <button className='border-2 border-purple-500 py-[12px] px-[24px] rounded-[16px] text-[20px] hover:shadow-xl'>Register</button>
+                            <button className='border-2 border-purple-500 lg:py-[12px] py-[8px] lg:px-[24px] px-[10px] rounded-[16px] text-[20px] hover:shadow-xl'>Register</button>
                         </NavLink>
                     </div>
                 </div>
