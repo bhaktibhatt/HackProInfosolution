@@ -13,7 +13,7 @@ const Navbar = () => {
                 <NavLink className="relative" to="/about">About Us
                     <span className="absolute bottom-0 left-0 w-full h-0 border-b-2 border-transparent transition-all duration-300"></span>
                 </NavLink>
-                <a className="relative " href="mailto:hackproinfosolution@gmail.com">Contact Us
+                <a className="relative" href="mailto:hackproinfosolution@gmail.com" target="_blank">Contact Us
                     <span className="absolute bottom-0 left-0 w-full h-0 border-b-2 border-transparent transition-all duration-300"></span>
                 </a>
             </div>
