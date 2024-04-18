@@ -36,6 +36,8 @@ import QRO from "../assets/QRO.png"
 import iqcs from "../assets/iqcs.png"
 import IAF from "../assets/IAF.png"
 
+import passware from "../assets/passware.jpeg"
+
 
 const Home = () =>{
   var settings = {
@@ -109,18 +111,20 @@ const Home = () =>{
                 <h3 className="py-2 text-[30px] lg:text-[50px]">Tools You Learn -</h3>
                 <div className="w-full space-y-[56px]">
                     <div className="flex justify-around items-center flex-wrap gap-[20px] lg:gap-[20px]">
-                        <img className=" lg:p-[10px] h-[40px] lg:h-28" src={aircrack} alt="aircrack" />
-                        <img className=" lg:p-[10px] h-[40px] lg:h-28" src={nmap} alt="nmap" />
-                        <img className=" lg:p-[10px] h-[40px] lg:h-28" src={burpsuite} alt="burpsuite" />
-                        <img className=" lg:p-[10px] h-[40px] lg:h-28" src={wireshark} alt="wireshark" />   
-                        <img className=" lg:p-[10px] h-[60px] lg:h-28" src={M} alt="M" />
-                        <img className=" lg:p-[10px] h-[60px] lg:h-28" src={nikto} alt="nikto" />
-                        <img className=" lg:p-[10px] h-[60px] lg:h-28" src={threehead} alt="dragon" />
+                        <img className=" lg:p-[10px] h-[40px] lg:h-[112px]" src={aircrack} alt="aircrack" />
+                        <img className=" lg:p-[10px] h-[40px] lg:h-[112px]" src={nmap} alt="nmap" />
+                        <img className=" lg:p-[10px] h-[40px] lg:h-[112px]" src={burpsuite} alt="burpsuite" />
+                        <img className=" lg:p-[10px] h-[40px] lg:h-[112px]" src={wireshark} alt="wireshark" />   
+                        <img className=" lg:p-[10px] h-[60px] lg:h-[112px]" src={M} alt="M" />
+                        <img className=" lg:p-[10px] h-[60px] lg:h-[112px]" src={nikto} alt="nikto" />
+                        <img className=" lg:p-[10px] h-[60px] lg:h-[112px]" src={threehead} alt="dragon" />
                         <img className=" lg:p-[10px] h-[40px] lg:h-[60px]" src={hashcat} alt="hashcat" />
-                        <img className=" lg:p-[10px] h-[60px] lg:h-28" src={SETK} alt="setk" />
-                        <img className=" lg:p-[10px] h-[60px] lg:h-28" src={beef} alt="beef" />
-                        <img className=" lg:p-[10px] h-[60px] lg:h-28" src={green} alt="green" />
-                        <img className=" lg:p-[10px] h-[70px] lg:h-28" src={kali} alt="kali" />  
+                        <img className=" lg:p-[10px] h-[60px] lg:h-[112px]" src={SETK} alt="setk" />
+                        <img className=" lg:p-[10px] h-[60px] lg:h-[112px]" src={beef} alt="beef" />
+                        <img className=" lg:p-[10px] h-[60px] lg:h-[112px]" src={green} alt="green" />
+                        <img className=" lg:p-[10px] h-[70px] lg:h-[112px]" src={kali} alt="kali" />
+                        <img className=" lg:p-[10px] h-[80px] lg:h-[150px]" src={passware} alt="passware" />
+                          
                     </div>
                 </div>
              </div>
