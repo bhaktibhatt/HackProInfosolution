@@ -22,6 +22,7 @@ An individual's knowledge, abilities, and expertise in the field of cybersecurit
 1. TailwindCSS - v3.4.1
 1. PostCSS - v8.4.35
 1. Nodemon - v3.1.0  
+1. Mongoose - v8.3.2
 
 </br>  
 
