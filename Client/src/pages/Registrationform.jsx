@@ -66,6 +66,9 @@ const Registrationform = () => {
                             <input type="radio" name="MODE" value={"Offline"} id='offline' /><label htmlFor="offline"><b>Offline</b></label>
                         </div>
                     </div>
+                    <div className="change" id='errorlog'>
+
+                    </div>
                     <div className='flex items-center w-full justify-center mt-[20px]'>
                         <input type="submit" className='border-2 border-purple-500 py-[12px] px-[24px] rounded-[16px] text-[20px] hover:shadow-xl' value={'Register'}/>
                     </div>
@@ -96,14 +99,31 @@ const Registrationform = () => {
                                 "mode" : regradiobuttonsvalue
                             }
                             let stringFormData = JSON.stringify(reguser)
-                            
                             fetch("http://localhost:3000/register", {
                                 "method": "POST",
                                 "headers" : {
                                     "Content-Type":"Application/JSON"
                                 },
                                 "body": stringFormData
-                            })
+                            }).then(res => {
+                                if (!res.ok) {
+                                        res.json().then(data => {
+                                            console.log(data);
+                                            if (data.err) {
+                                                var errorlog = document.getElementById("errorlog")
+                                                errorlog.innerHTML = data.err
+                                                errorlog.classList.add('visible')
+                                                function fadein() {
+                                                    errorlog.classList.remove('visible')
+                                                }
+                                                setTimeout(fadein, 10000);
+                                            }
+                                        })
+                                    }
+                                    else {
+                                        window.location.replace("/")
+                                    }
+                                })
                             navigate(`/`);
                         })  
                     }

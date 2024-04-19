@@ -1,0 +1,22 @@
+#errorlog {
+    opacity: 0;
+    /* margin: 0; */
+    font-size: 15px;
+    color: red;
+}
+
+.change {
+    padding: 10px;
+    transition: opacity 300ms;
+    transition-timing-function: ease-in-out;
+    margin-bottom: 10px;
+    font-weight: 500;
+    cursor: default;
+}
+.visible {
+    opacity: 1 !important;
+}
+
+.notshow {
+    display: none;
+}
