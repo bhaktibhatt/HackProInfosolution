@@ -21,7 +21,7 @@ const Navbar = () => {
             </div>
             <div className="relative lg:flex font-semibold text-[18px] text-zinc-950 lg:mt-0 ">
                 
-                <div className={`absolute bg-slate-200 w-full lg:static lg:flex lg:flex-row px-[12px] flex-col items-center lg:justify-around lg:space-x-[24px] lg:space-y-0 space-y-[12px] transition-all duration-500 ease-in ${menuOpen ? 'flex': 'hidden'}`}>
+                <div className={`absolute bg-slate-200 w-full lg:static flex lg:flex-row px-[12px] flex-col items-center lg:justify-around lg:space-x-[24px] lg:space-y-0 space-y-[12px] lg:translate-y-0 ${menuOpen ? 'translate-y-[0]': ' translate-y-[-100vh]'} transition-all duration-700 ease-in`}>
                     <p className="cursor-pointer">Courses</p>
                     <NavLink to="/about">About</NavLink> 
                     <p className="cursor-pointer lg:pb-0 pb-[20px]  ">Contact</p>
