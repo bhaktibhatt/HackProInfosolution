@@ -5,6 +5,7 @@ import "./Navbar.css"
 const Navbar = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
+    const [showCourse, setShowCourse] = useState(false);
 
     return (
         <div className="sticky top-0 bg-slate-200 w-full z-10 lg:py-[8px] lg:px-[24px] lg:flex lg:items-center">
@@ -20,12 +21,22 @@ const Navbar = () => {
             </button>
             </div>
             <div className="relative lg:flex font-semibold text-[18px] text-zinc-950 lg:mt-0 ">
-                
-                <div className={`absolute bg-slate-200 w-full lg:static flex lg:flex-row px-[12px] flex-col items-center lg:justify-around lg:space-x-[24px] lg:space-y-0 space-y-[12px] lg:translate-y-0 ${menuOpen ? 'translate-y-[0]': ' translate-y-[-100vh]'} transition-all duration-700 ease-in`}>
-                    <p className="cursor-pointer">Courses</p>
-                    <NavLink to="/about">About</NavLink> 
-                    <p className="cursor-pointer lg:pb-0 pb-[20px]  ">Contact</p>
-                </div>    
+                <ul className={`absolute bg-slate-200 w-full lg:static flex lg:flex-row px-[12px] flex-col items-center lg:justify-around lg:gap-[64px] lg:space-y-0 space-y-[12px] lg:translate-y-0 ${menuOpen ? 'translate-y-[0]': ' translate-y-[-100vh]'} transition-all duration-700 ease-in`}>
+                    <li className="lg:relative text-center cursor-pointer px-[32px]">
+                        <button onClick={() => setShowCourse(!showCourse)}>Courses</button>
+                        <div className={` bg-slate-300 lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md ${showCourse ? 'flex': 'hidden'}`}>
+                            <ul className="space-y-[12px] text-[16px] text-left font-medium">
+                                <li className="whitespace-nowrap">Ethical Hacking and Cyber Security</li>
+                                <li className="whitespace-nowrap">Penetration Testing</li>
+                                <li className="whitespace-nowrap">Cyber Forensics Investigation</li>
+                                <li className="whitespace-nowrap">Bug Bounty Hunting</li>
+                                <li className="whitespace-nowrap">Computer Science</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><NavLink to="/about">About</NavLink></li>
+                    <li className="cursor-pointer lg:pb-0 pb-[20px]  ">Contact</li>
+                </ul>    
             </div>
         </div>
     )
