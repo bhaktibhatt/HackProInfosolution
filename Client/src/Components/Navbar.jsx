@@ -6,6 +6,7 @@ const Navbar = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const [showCourse, setShowCourse] = useState(false);
+    const [showContact, setShowContact] = useState(false);
 
     return (
         <div className="sticky top-0 bg-slate-200 w-full z-10 lg:py-[8px] lg:px-[24px] lg:flex lg:items-center">
@@ -20,11 +21,11 @@ const Navbar = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className ="w-[36px] h-[36px]"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
             </button>
             </div>
-            <div className="relative lg:flex font-semibold text-[18px] text-zinc-950 lg:mt-0 ">
-                <ul className={`absolute bg-slate-200 w-full lg:static flex lg:flex-row px-[12px] flex-col items-center lg:justify-around lg:gap-[64px] lg:space-y-0 space-y-[12px] lg:translate-y-0 ${menuOpen ? 'translate-y-[0]': ' translate-y-[-100vh]'} transition-all duration-700 ease-in`}>
+            <div className="relative lg:flex font-semibold text-[18px] text-zinc-950 lg:mt-0 lg:mr-[80px]">
+                <ul className={`absolute bg-slate-200 w-full lg:static flex lg:flex-row px-[12px] flex-col items-center lg:gap-[50px] lg:justify-around lg:space-y-0 space-y-[12px] lg:translate-y-0 ${menuOpen ? 'translate-y-[0]': ' translate-y-[-100vh]'} transition-all duration-700 ease-in`}>
                     <li className="lg:relative text-center cursor-pointer px-[32px]">
                         <button onClick={() => setShowCourse(!showCourse)}>Courses</button>
-                        <div className={` bg-slate-300 lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md ${showCourse ? 'flex': 'hidden'}`}>
+                        <div className={` bg-slate-300 lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md transition-all duration-700 ease-in ${showCourse ? 'flex': 'hidden'}`}>
                             <ul className="space-y-[12px] text-[16px] text-left font-medium">
                                 <li className="whitespace-nowrap">Ethical Hacking and Cyber Security</li>
                                 <li className="whitespace-nowrap">Penetration Testing</li>
@@ -34,8 +35,17 @@ const Navbar = () => {
                             </ul>
                         </div>
                     </li>
-                    <li><NavLink to="/about">About</NavLink></li>
-                    <li className="cursor-pointer lg:pb-0 pb-[20px]  ">Contact</li>
+                    <li className="px-[32px]"><NavLink to="/about">About</NavLink></li>
+                    <li className="relative text-center cursor-pointer lg:pb-0 pb-[20px] px-[32px]">
+                        <button onClick={() => setShowContact(!showContact)}>Contact</button> 
+                        <div className={`bg-slate-300 lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md ${showContact ? 'flex' : 'hidden'}`}>
+                            <ul className="space-y-[12px] text-[16px] text-left font-medium">
+                                <li className="whitespace-nowrap">Phone : +91-79727-71883</li>
+                                <li className="whitespace-nowrap">mail: hackproinfosolution@gmail.com</li>
+                                <li className="whitespace-nowrap">Insta : @hackproinfosolution</li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>    
             </div>
         </div>
