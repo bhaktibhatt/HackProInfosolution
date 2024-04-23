@@ -27,11 +27,21 @@ const Navbar = () => {
                         <button onClick={() => setShowCourse(!showCourse)}>Courses</button>
                         <div className={` bg-slate-300 lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md transition-all duration-700 ease-in ${showCourse ? 'flex': 'hidden'}`}>
                             <ul className="space-y-[12px] text-[16px] text-left font-medium">
-                                <li className="whitespace-nowrap">Ethical Hacking and Cyber Security</li>
-                                <li className="whitespace-nowrap">Penetration Testing</li>
-                                <li className="whitespace-nowrap">Cyber Forensics Investigation</li>
-                                <li className="whitespace-nowrap">Bug Bounty Hunting</li>
-                                <li className="whitespace-nowrap">Computer Science</li>
+                                <li className="whitespace-nowrap hover:text-violet-700">
+                                    <NavLink to="/ethicalhackingandcybersecurity">Ethical Hacking and Cyber Security</NavLink>
+                                </li>
+                                <li className="whitespace-nowrap hover:text-violet-700">
+                                    <NavLink to="/pentesting">Penetration Testing</NavLink>
+                                </li>
+                                <li className="whitespace-nowrap hover:text-violet-700">
+                                    <NavLink to="/cyberforensics">Cyber Forensics Investigation</NavLink>
+                                </li>
+                                <li className="whitespace-nowrap hover:text-violet-700">
+                                    <NavLink to="/bugbounty">Bug Bounty Hunting</NavLink>
+                                    </li>
+                                <li className="whitespace-nowrap hover:text-violet-700">
+                                    <NavLink to="/computernetwork">Computer Network</NavLink>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -40,9 +50,15 @@ const Navbar = () => {
                         <button onClick={() => setShowContact(!showContact)}>Contact</button> 
                         <div className={`bg-slate-300 lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md ${showContact ? 'flex' : 'hidden'}`}>
                             <ul className="space-y-[12px] text-[16px] text-left font-medium">
-                                <li className="whitespace-nowrap">Phone : +91-79727-71883</li>
-                                <li className="whitespace-nowrap">mail: hackproinfosolution@gmail.com</li>
-                                <li className="whitespace-nowrap">Insta : @hackproinfosolution</li>
+                                <li className="whitespace-nowrap flex font-mono gap-[10px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 256 256"><path fill="currentColor" d="m222.37 158.46l-47.11-21.11l-.13-.06a16 16 0 0 0-15.17 1.4a8.12 8.12 0 0 0-.75.56L134.87 160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16 16 0 0 0 1.32-15.06v-.12L97.54 33.64a16 16 0 0 0-16.62-9.52A56.26 56.26 0 0 0 32 80c0 79.4 64.6 144 144 144a56.26 56.26 0 0 0 55.88-48.92a16 16 0 0 0-9.51-16.62M176 208A128.14 128.14 0 0 1 48 80a40.2 40.2 0 0 1 34.87-40a.61.61 0 0 0 0 .12l21 47l-20.67 24.74a6.13 6.13 0 0 0-.57.77a16 16 0 0 0-1 15.7c9.06 18.53 27.73 37.06 46.46 46.11a16 16 0 0 0 15.75-1.14a8.44 8.44 0 0 0 .74-.56L168.89 152l47 21.05h.11A40.21 40.21 0 0 1 176 208"/></svg>
+                                    <a className="hover:text-violet-700" href="tel:+917972771883" target="_blank">+91-79727-71883</a></li>
+                                <li className="whitespace-nowrap flex gap-[10px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                                    <a className="hover:text-violet-700" href="mailto:hackproinfosolution@gmail.com " target="_blank">hackproinfosolution@gmail.com</a></li>
+                                <li className="whitespace-nowrap flex gap-[10px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+                                    <a className="hover:text-violet-700" href="https://www.instagram.com/hackproinfosolution/" target="_blank">@hackproinfosolution</a></li>
                             </ul>
                         </div>
                     </li>
