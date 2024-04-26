@@ -50,9 +50,10 @@ const Navbar = () => {
             if(navRef2.current.contains(e.target)){
                 setMenuOpen(false);
                 console.log(menuRef.current);
+                console.log("e.target"+e.target)
             }
         }
-        document.addEventListener("mousedown", handler);
+        document.addEventListener("click", handler);
     }); 
     
     useEffect(()=>{
@@ -60,29 +61,33 @@ const Navbar = () => {
             if(navRef3.current.contains(e.target)){
                 setMenuOpen(false);
                 console.log(menuRef.current);
+                console.log("e.target"+e.target)
             }
         }
-        document.addEventListener("mousedown", handler);
-    }); 
+        document.addEventListener("click", handler);
+    });  
     
     useEffect(()=>{
         let handler = (e) =>{
             if(navRef4.current.contains(e.target)){
                 setMenuOpen(false);
                 console.log(menuRef.current);
+                console.log("e.target"+e.target)
             }
         }
-        document.addEventListener("mousedown", handler);
-    });  
-    useEffect(()=>{
+        document.addEventListener("click", handler);
+    });   
+
+   useEffect(()=>{
         let handler = (e) =>{
             if(navRef5.current.contains(e.target)){
                 setMenuOpen(false);
                 console.log(menuRef.current);
+                console.log("e.target"+e.target)
             }
         }
-        document.addEventListener("mousedown", handler);
-    });
+        document.addEventListener("click", handler);
+    }); 
 
     return (
         <div className="sticky top-0 bg-slate-200 w-full z-10 lg:py-[8px] lg:px-[24px] lg:flex lg:items-center" ref={menuRef}>
