@@ -1,15 +1,91 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import "./Navbar.css"
 const Navbar = () => {
 
+    let menuRef = useRef();
+    let aboutRef = useRef();
+    let navRef1 = useRef();
+    let navRef2 = useRef();
+    let navRef3 = useRef();
+    let navRef4 = useRef();
+    let navRef5 = useRef();
     const [menuOpen, setMenuOpen] = useState(false);
     const [showCourse, setShowCourse] = useState(false);
     const [showContact, setShowContact] = useState(false);
 
+
+    useEffect(()=>{
+        let handler = (e) =>{
+            if(!menuRef.current.contains(e.target)){
+                setMenuOpen(false);
+                console.log(menuRef.current);
+            }
+        }
+        document.addEventListener("click", handler);
+    });
+
+    useEffect(()=>{
+        let handler = (e) =>{
+            if(aboutRef.current.contains(e.target)){
+                setMenuOpen(false);
+                console.log(menuRef.current);
+            }
+        }
+        document.addEventListener("click", handler);
+    });
+    useEffect(()=>{
+        let handler = (e) =>{
+            if(navRef1.current.contains(e.target)){
+                setMenuOpen(false);
+                console.log(menuRef.current);
+                console.log("e.target"+e.target)
+            }
+        }
+        document.addEventListener("click", handler);
+    });  
+    
+    useEffect(()=>{
+        let handler = (e) =>{
+            if(navRef2.current.contains(e.target)){
+                setMenuOpen(false);
+                console.log(menuRef.current);
+            }
+        }
+        document.addEventListener("mousedown", handler);
+    }); 
+    
+    useEffect(()=>{
+        let handler = (e) =>{
+            if(navRef3.current.contains(e.target)){
+                setMenuOpen(false);
+                console.log(menuRef.current);
+            }
+        }
+        document.addEventListener("mousedown", handler);
+    }); 
+    
+    useEffect(()=>{
+        let handler = (e) =>{
+            if(navRef4.current.contains(e.target)){
+                setMenuOpen(false);
+                console.log(menuRef.current);
+            }
+        }
+        document.addEventListener("mousedown", handler);
+    });  
+    useEffect(()=>{
+        let handler = (e) =>{
+            if(navRef5.current.contains(e.target)){
+                setMenuOpen(false);
+                console.log(menuRef.current);
+            }
+        }
+        document.addEventListener("mousedown", handler);
+    });
+
     return (
-        <div className="sticky top-0 bg-slate-200 w-full z-10 lg:py-[8px] lg:px-[24px] lg:flex lg:items-center">
+        <div className="sticky top-0 bg-slate-200 w-full z-10 lg:py-[8px] lg:px-[24px] lg:flex lg:items-center" ref={menuRef}>
             <div className="w-full flex items-center justify-between px-[20px]">
                 <NavLink to="/" className="flex h-[48px] w-[48px]">
                     <svg className="h-[40px] w-[40px]" width="57" height="70" viewBox="0 0 57 70" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,35 +93,35 @@ const Navbar = () => {
                     </svg>
                 </NavLink>
             {/* ham menu */}
-            <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden flex items-center justify-center">
+            <button onClick={() => {setMenuOpen(!menuOpen);setShowCourse(false); setShowContact(false)}} className="lg:hidden flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className ="w-[36px] h-[36px]"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
             </button>
             </div>
-            <div className="relative lg:flex font-semibold text-[18px] text-zinc-950 lg:mt-0 lg:mr-[80px]">
+            <div className="relative lg:flex font-semibold text-[18px] text-zinc-950 lg:mt-0 lg:mr-[80px]"  >
                 <ul className={`absolute bg-slate-200 w-full lg:static flex lg:flex-row px-[12px] flex-col items-center lg:gap-[50px] lg:justify-around lg:space-y-0 space-y-[12px] lg:translate-y-0 ${menuOpen ? 'translate-y-[0]': ' translate-y-[-100vh]'} transition-all duration-700 ease-in`}>
                     <li className="lg:relative text-center cursor-pointer px-[32px]">
                         <button onClick={() => setShowCourse(!showCourse)}>Courses</button>
-                        <div className={` bg-slate-300 lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md transition-all duration-700 ease-in ${showCourse ? 'flex': 'hidden'}`}>
+                        <div className={` bg-slate-300 lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md transition-all duration-700 ease-in ${showCourse ? 'flex': 'hidden'}`} >
                             <ul className="space-y-[12px] text-[16px] text-left font-medium">
-                                <li className="whitespace-nowrap hover:text-violet-700">
+                                <li className="whitespace-nowrap hover:text-violet-700" ref={navRef1}>
                                     <NavLink to="/ethicalhackingandcybersecurity">Ethical Hacking and Cyber Security</NavLink>
                                 </li>
-                                <li className="whitespace-nowrap hover:text-violet-700">
+                                <li className="whitespace-nowrap hover:text-violet-700" ref={navRef2}>
                                     <NavLink to="/pentesting">Penetration Testing</NavLink>
                                 </li>
-                                <li className="whitespace-nowrap hover:text-violet-700">
+                                <li className="whitespace-nowrap hover:text-violet-700" ref={navRef3}>
                                     <NavLink to="/cyberforensics">Cyber Forensics Investigation</NavLink>
                                 </li>
-                                <li className="whitespace-nowrap hover:text-violet-700">
+                                <li className="whitespace-nowrap hover:text-violet-700" ref={navRef4}>
                                     <NavLink to="/bugbounty">Bug Bounty Hunting</NavLink>
                                     </li>
-                                <li className="whitespace-nowrap hover:text-violet-700">
+                                <li className="whitespace-nowrap hover:text-violet-700" ref={navRef5}>
                                     <NavLink to="/computernetwork">Computer Network</NavLink>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li className="px-[32px]"><NavLink to="/about">About</NavLink></li>
+                    <li className="px-[32px]"><NavLink to="/about" ref={aboutRef}>About</NavLink></li>
                     <li className="relative text-center cursor-pointer lg:pb-0 pb-[20px] px-[32px]">
                         <button onClick={() => setShowContact(!showContact)}>Contact</button> 
                         <div className={`bg-slate-300 lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md ${showContact ? 'flex' : 'hidden'}`}>
