@@ -105,28 +105,28 @@ const Navbar = () => {
             <div className="relative lg:flex font-semibold text-[18px] text-zinc-950 lg:mt-0 lg:mr-[80px]"  >
                 <ul className={`absolute bg-slate-200 w-full lg:static flex lg:flex-row px-[12px] flex-col items-center lg:gap-[50px] lg:justify-around lg:space-y-0 space-y-[12px] lg:translate-y-0 ${menuOpen ? 'translate-y-[0]': ' translate-y-[-100vh]'} transition-all duration-700 ease-in`}>
                     <li className="lg:relative text-center cursor-pointer px-[32px]">
-                        <button onClick={() => setShowCourse(!showCourse)}>Courses</button>
-                        <div className={` bg-slate-300 lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md transition-all duration-700 ease-in ${showCourse ? 'flex': 'hidden'}`} >
+                        <button className="cursor-pointer" onClick={() => setShowCourse(!showCourse)}>Courses</button>
+                        <div className={` cursor-pointer bg-slate-300 lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md transition-all duration-700 ease-in ${showCourse ? 'flex': 'hidden'}`} >
                             <ul className="space-y-[12px] text-[16px] text-left font-medium">
-                                <li className="whitespace-nowrap hover:text-violet-700" ref={navRef1}>
+                                <li className="whitespace-nowrap hover:text-violet-700 cursor-pointer" ref={navRef1}>
                                     <NavLink to="/ethicalhackingandcybersecurity">Ethical Hacking and Cyber Security</NavLink>
                                 </li>
-                                <li className="whitespace-nowrap hover:text-violet-700" ref={navRef2}>
+                                <li className="whitespace-nowrap hover:text-violet-700 cursor-pointer" ref={navRef2}>
                                     <NavLink to="/pentesting">Penetration Testing</NavLink>
                                 </li>
-                                <li className="whitespace-nowrap hover:text-violet-700" ref={navRef3}>
+                                <li className="whitespace-nowrap hover:text-violet-700 cursor-pointer" ref={navRef3}>
                                     <NavLink to="/cyberforensics">Cyber Forensics Investigation</NavLink>
                                 </li>
-                                <li className="whitespace-nowrap hover:text-violet-700" ref={navRef4}>
+                                <li className="whitespace-nowrap hover:text-violet-700 cursor-pointer" ref={navRef4}>
                                     <NavLink to="/bugbounty">Bug Bounty Hunting</NavLink>
                                     </li>
-                                <li className="whitespace-nowrap hover:text-violet-700" ref={navRef5}>
+                                <li className="whitespace-nowrap hover:text-violet-700 cursor-pointer" ref={navRef5}>
                                     <NavLink to="/computernetwork">Computer Network</NavLink>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li className="px-[32px]"><NavLink to="/about" ref={aboutRef}>About</NavLink></li>
+                    <li className="px-[32px] cursor-pointer"><NavLink to="/about" ref={aboutRef}>About</NavLink></li>
                     <li className="relative text-center cursor-pointer lg:pb-0 pb-[20px] px-[32px]">
                         <button onClick={() => setShowContact(!showContact)}>Contact</button> 
                         <div className={`bg-slate-300 lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md ${showContact ? 'flex' : 'hidden'}`}>
@@ -139,7 +139,7 @@ const Navbar = () => {
                                     <a className="hover:text-violet-700" href="mailto:hackproinfosolution@gmail.com " target="_blank">hackproinfosolution@gmail.com</a></li>
                                 <li className="whitespace-nowrap flex gap-[10px]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
-                                    <a className="hover:text-violet-700" href="https://www.instagram.com/hackproinfosolution/" target="_blank">@hackproinfosolution</a></li>
+                                    <a className="hover:text-violet-700 " href="https://www.instagram.com/hackproinfosolution/" target="_blank">@hackproinfosolution</a></li>
                             </ul>
                         </div>
                     </li>
