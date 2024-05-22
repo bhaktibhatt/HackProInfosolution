@@ -5,7 +5,7 @@
     margin-left:0 1rem;
 }
 .slick-prev::before,.slick-next::before{
-   color:black;
+    color: #47D85F;
    height:20px;
    width:20px;
     }

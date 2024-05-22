@@ -8,3 +8,7 @@
     mask: linear-gradient(90deg, transparent, #ffffff 10%, #ffffff 90%, transparent);
     -webkit-mask: linear-gradient(90deg, transparent, #ffffff 10%, #ffffff 90%, transparent);
 }
+
+body{
+    background-color: #333333;
+}
