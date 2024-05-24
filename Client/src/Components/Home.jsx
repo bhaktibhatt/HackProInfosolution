@@ -50,11 +50,11 @@ const Home = () =>{
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true ,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
@@ -145,8 +145,8 @@ const Home = () =>{
                 <div className=" border-[4px] border-green w-fit">
                   <h3 className="text-[30px] lg:text-[50px] p-[20px]">Training and Sessions</h3>
                 </div>
-                <div className="mt-[150px] flex w-full justify-around">
-                  <div className="flex flex-col items-center justify-around gap-[20px] lg:p-[20px] bg-black border-[2px] border-green h-[400px] w-[400px]">
+                <div className="mt-[150px] flex lg:flex-row flex-col gap-[20px] w-full justify-around">
+                  <div className="flex flex-col items-center justify-around gap-[20px] lg:p-[20px] p-[25px] bg-black border-[2px] border-green lg:h-[400px] lg:w-[400px]">
                   <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clipPath="url(#clip0_431_54)">
 <path d="M37.7555 57.9441L29.1887 54.7129C21.3555 51.7648 12.6152 55.7238 9.6668 63.5507C6.71875 71.3839 10.6777 80.1211 18.5078 83.0695L37.7555 90.323V57.9441Z" fill="#C2C2C2"/>
@@ -162,9 +162,9 @@ const Home = () =>{
 </clipPath>
 </defs>
                   </svg>
-                  <h2 className="lg:text-[30px] font-semibold text-center">Interactive Online Webinars</h2>
+                  <h2 className="lg:text-[30px] text-[32px] font-semibold text-center">Interactive Online Webinars</h2>
                   </div>
-                  <div className="flex flex-col items-center justify-around gap-[10px] lg:p-[20px] lg:pt-0 bg-black border-[2px] border-green h-[400px] w-[400px]">
+                  <div className="flex flex-col items-center justify-around gap-[10px] lg:p-[20px] p-[25px] lg:pt-0 bg-black border-[2px] border-green lg:h-[400px] lg:w-[400px]">
                   <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clipPath="url(#clip0_431_63)">
 <path d="M102.997 47.6096C116.108 47.6096 126.736 36.9812 126.736 23.8704C126.736 10.7595 116.108 0.131104 102.997 0.131104C89.8861 0.131104 79.2577 10.7595 79.2577 23.8704C79.2577 36.9812 89.8861 47.6096 102.997 47.6096Z" fill="#C7C7C7"/>
@@ -198,7 +198,7 @@ const Home = () =>{
 </clipPath>
 </defs>
                   </svg>
-                  <h2 className="lg:text-[30px] font-semibold text-center">Live Workshops</h2>
+                  <h2 className="lg:text-[30px] text-[32px] font-semibold text-center">Live Workshops</h2>
                   </div>
                 </div>
               </div>
