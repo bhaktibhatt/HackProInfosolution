@@ -1,11 +1,33 @@
-.slick-slide {
+/* .slick-slide {
     padding:10px 0px 30px 0px;
-}
-.slick-slide div{
+    
+} */
+.slick-slider .slick-slide {
+    padding: 0 19px;
+    /* background: #000; */
+  }
+
+  /* .slick-slide {
+      margin: 0 27px;
+  } */
+
+  /* the parent */
+  /* .slick-list {
+      margin: 0 -27px;
+  } */
+/* .slick-slide div{
     margin-left:0 1rem;
-}
+} */
 .slick-prev::before,.slick-next::before{
     color: #47D85F;
    height:20px;
    width:20px;
     }
+ 
+@media screen and (max-width:500px){
+    .slick-slider .slick-slide {
+        padding: 10px 20px 10px 22px;
+        margin: 0;
+      }
+
+}
