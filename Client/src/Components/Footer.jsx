@@ -3,8 +3,8 @@ import footerBg from '../assets/footerbg.png'
 const Footer = () => {
   return (
     // href='https://github.com/bhaktibhatt href='https://github.com/prathmesh-ka-github''
-    <div className=' w-full font-raleway text-white'>
-      <div className=' relative flex lg:flex-row flex-col items-center w-full lg:p-[100px] p-[20px] justify-around lg:items-start border-b-2 lg:gap-0 gap-[20px] border-green bg-black2'>
+    <div className='w-full font-raleway mt-auto text-white'>
+      <div className='flex lg:flex-row flex-col items-center w-full lg:p-[100px] p-[20px] justify-around lg:items-start border-b-2 lg:gap-0 gap-[20px] border-green bg-black2'>
       {/* <img className='absolute w-full opacity-40 -z-10 h-[500px]' src={footerBg} alt="" /> */}
       
         <div className='lg:h-[200px] lg:w-[200px] h-[50px] w-[50px]'>
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
         </div>
       </div>
-      <div className='flex lg:flex-row flex-col items-center lg:py-[10px] lg:px-[30px] bg-black2 justify-between py-[10px] px-[10px] '>
+      <div className='flex lg:flex-row flex-col items-center lg:py-[10px] lg:px-[30px] justify-between py-[10px] px-[10px] '>
           <p className='font-semibold lg:text-[20px] text-[10px]'>© Copyright 2024 HackPro Infosolution</p>
           <p className='font-semibold lg:text-[20px] text-[10px]'>Designed and Developed By <span className='hover:text-green font-mono'><a href='https://github.com/bhaktibhatt'>bhaktibhatt</a></span> and <span className='hover:text-green font-mono'><a href='https://github.com/prathmesh-ka-github'>prathamc0des</a></span></p>
       </div>
