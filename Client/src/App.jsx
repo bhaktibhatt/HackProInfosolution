@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect, useState } from 'react';
 import './App.css'
 import Navbar from "./Components/Navbar.jsx"
 import About from "./pages/About.jsx"
@@ -13,9 +14,35 @@ import Computernetwork from './pages/Computernetwork.jsx'
 import Registrationform from './pages/Registrationform.jsx'
 import ScrollToTop from './Components/ScrollToTop.js'
 function App() {
+    const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      const loader = document.querySelector('.loader');
+      if (loader) {
+        loader.classList.add('loader--hidden');
+        loader.addEventListener('transitionend', handleTransitionEnd);
+      }
+    };
+
+    const handleTransitionEnd = (event) => {
+      const loader = event.target;
+      loader.removeEventListener('transitionend', handleTransitionEnd);
+      setIsLoading(false); // Set state to remove the loader
+    };
+
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
 
     return (
         <Router>
+            <div>
+                {isLoading && <div className="loader"></div>}
+            </div>
             <div className=' font-raleway '>
                 <ScrollToTop/>
                 <Navbar/>

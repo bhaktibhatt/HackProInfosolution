@@ -96,7 +96,7 @@ const Home = () => {
   return (
     <div className="text-white flex flex-col lg:gap-[300px]">
       <div className="relative w-full " ref={comp}>
-        <img className="w-full blur-[2px] brightness-[.90]" src={image} alt="" />
+        <img className="w-full blur-[2px] brightness-[.90]" src={image} alt="" loading="lazy"/>
         <div id="title-btn-container " className="absolute lg:top-[250px] top-[40px] right-0 left-0 bottom-0 m-auto flex flex-col items-center gap-[8px]">
           <h1 id="title" className="text-white font-spaceGrotesk lg:text-[72px] text-[24px] font-semibold">
             HACKPRO INFOSOLUTION
@@ -427,66 +427,79 @@ const Home = () => {
                 className=" lg:p-[10px] h-[40px] lg:h-[112px]"
                 src={aircrack}
                 alt="aircrack"
+                loading="lazy"
               />
               <img
                 className=" lg:p-[10px] h-[40px] lg:h-[112px]"
                 src={nmap}
                 alt="nmap"
+                loading="lazy"
               />
               <img
                 className=" lg:p-[10px] h-[40px] lg:h-[112px]"
                 src={burpsuite}
                 alt="burpsuite"
+                loading="lazy"
               />
               <img
                 className=" lg:p-[10px] h-[40px] lg:h-[112px]"
                 src={wireshark}
                 alt="wireshark"
+                loading="lazy"
               />
               <img
                 className=" lg:p-[10px] h-[60px] lg:h-[112px]"
                 src={M}
                 alt="M"
+                loading="lazy"
               />
               <img
                 className=" lg:p-[10px] h-[60px] lg:h-[112px]"
                 src={nikto}
                 alt="nikto"
+                loading="lazy"
               />
               <img
                 className=" lg:p-[10px] h-[60px] lg:h-[112px]"
                 src={threehead}
                 alt="dragon"
+                loading="lazy"
               />
               <img
                 className=" lg:p-[10px] h-[40px] lg:h-[60px]"
                 src={hashcat}
                 alt="hashcat"
+                loading="lazy"
               />
               <img
                 className=" lg:p-[10px] h-[60px] lg:h-[112px]"
                 src={SETK}
                 alt="setk"
+                loading="lazy"
               />
               <img
                 className=" lg:p-[10px] h-[60px] lg:h-[112px]"
                 src={beef}
                 alt="beef"
+                loading="lazy"
               />
               <img
                 className=" lg:p-[10px] h-[60px] lg:h-[112px]"
                 src={green}
                 alt="green"
+                loading="lazy"
               />
               <img
                 className=" lg:p-[10px] h-[70px] lg:h-[112px]"
                 src={kali}
                 alt="kali"
+                loading="lazy"
               />
               <img
                 className=" lg:p-[10px] h-[80px] lg:h-[150px]"
                 src={passware}
                 alt="passware"
+                loading="lazy"
               />
             </div>
           </div>
@@ -503,26 +516,31 @@ const Home = () => {
                 className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]"
                 src={ISO}
                 alt="ISO Cert"
+                loading="lazy"
               />
               <img
                 className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]"
                 src={MSME}
                 alt="MSME Cert"
+                loading="lazy"
               />
               <img
                 className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]"
                 src={skillindia}
                 alt="Skill India Cert"
+                loading="lazy"
               />
               <img
                 className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]"
                 src={CNI}
                 alt="CNI cert"
+                loading="lazy"
               />
               <img
                 className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]"
                 src={ASNI}
                 alt="ASNI Cert"
+                loading="lazy"
               />
             </Marquee>
             <Marquee speed={20} autoFill behavior="" direction="right">
@@ -531,26 +549,31 @@ const Home = () => {
                   className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]"
                   src={DigitalIndia}
                   alt="Digital India Cert"
+                  loading="lazy"
                 />
                 <img
                   className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]"
                   src={UKAC}
                   alt="UKAC Cert"
+                  loading="lazy"
                 />
                 <img
                   className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]"
                   src={QRO}
                   alt="QRO Cert"
+                  loading="lazy"
                 />
                 <img
                   className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]"
                   src={iqcs}
                   alt="IQCS Cert"
+                  loading="lazy"
                 />
                 <img
                   className="h-[96px] mx-[20px] lg:h-[128px] lg:mx-[40px]"
                   src={IAF}
                   alt="IAF Cert"
+                  loading="lazy"
                 />
               </div>
             </Marquee>

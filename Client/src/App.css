@@ -20,3 +20,41 @@
 .notshow {
     display: none;
 }
+
+.loader{
+    position: fixed;
+    transform: scale();
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111111;
+    transition: opacity 0.8s, visibility 0.8s;
+    z-index: 30;
+  }
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #47D85F;
+    border-top-color: #0B2B46;
+    border-radius: 50%;
+    animation: loading 0.8s ease infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
