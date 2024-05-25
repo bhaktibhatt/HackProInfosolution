@@ -3,6 +3,10 @@ import { NavLink } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+
+
 import image from "../assets/image.png";
 import Marquee from "react-fast-marquee";
 import Card from "./Card.jsx";
@@ -73,16 +77,32 @@ const Home = () => {
     ],
   };
 
+  const comp = useRef(null);
+
+  useLayoutEffect(() =>{
+    let ctx = gsap.context(() => {
+      const t1 = gsap.timeline()
+      t1.from(["#title"],{
+        opactity:0,
+        delay:0.3,
+        duration:3,
+
+      })
+    }, comp)
+
+    return () => ctx.revert
+  }, [])
+
   return (
     <div className="text-white flex flex-col lg:gap-[300px]">
-      <div className="relative w-full">
-        <img className="w-full" src={image} alt="" />
-        <div className="absolute lg:top-[250px] top-[40px] right-0 left-0 bottom-0 m-auto flex flex-col items-center gap-[8px]">
-          <h1 className="text-white lg:text-[72px] text-[24px] font-semibold">
+      <div className="relative w-full " ref={comp}>
+        <img className="w-full blur-[2px] brightness-[.90]" src={image} alt="" />
+        <div id="title-btn-container " className="absolute lg:top-[250px] top-[40px] right-0 left-0 bottom-0 m-auto flex flex-col items-center gap-[8px]">
+          <h1 id="title" className="text-white font-spaceGrotesk lg:text-[72px] text-[24px] font-semibold">
             HACKPRO INFOSOLUTION
           </h1>
           <NavLink to="/registrationform">
-            <button className="lg:w-[230px] rounded-lg border-[2px] border-green bg-green text-black font-semibold text-slate py-[4px] px-[8px] lg:px-[24px] lg:py-[16px] lg:text-[30px] hover:drop-shadow-xl hover:text-green hover:bg-black hover:border-[2px] hover:border-green transition-all">
+            <button id="btn" className="lg:w-[230px] rounded-lg border-[2px] border-green bg-green text-black font-semibold text-slate py-[4px] px-[8px] lg:px-[24px] lg:py-[16px] lg:text-[30px] hover:drop-shadow-xl hover:text-green hover:bg-black hover:border-[2px] hover:border-green transition-all">
               Enroll Now
             </button>
           </NavLink>

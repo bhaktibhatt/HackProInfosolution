@@ -14,7 +14,8 @@ module.exports = {
     },
     extend: {
       fontFamily:{
-        raleway: ['Raleway', 'sans-serif']
+        raleway: ['Raleway', 'sans-serif'],
+        spaceGrotesk: ["Space Grotesk", "sans-serif"],
       },
     },
   },
