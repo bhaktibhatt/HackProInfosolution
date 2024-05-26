@@ -23,7 +23,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className='flex flex-col '>
-          <h2 className='font-semibold lg:text-[20px] text-center'>Services</h2>
+          <h2 className='font-semibold lg:text-[20px]'>Services</h2>
           <ul className='lg:text-[20px] text-[10px]'>
             <li className="hover:text-green">Courses</li>
             <li className="hover:text-green">Workshops</li>

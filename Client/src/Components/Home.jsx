@@ -3,8 +3,10 @@ import { NavLink } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 
 import image from "../assets/image.png";
@@ -78,26 +80,71 @@ const Home = () => {
   };
 
   const comp = useRef(null);
+  const animateRef = useRef(null);
 
-  useLayoutEffect(() =>{
-    let ctx = gsap.context(() => {
-      const t1 = gsap.timeline()
-      t1.from(["#title"],{
-        opactity:0,
-        delay:0.3,
-        duration:3,
+  useEffect(() => {
+    // Define the animation context
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline();
 
-      })
-    }, comp)
+      // Initial state: hide the text and button with blur and offset
+      tl.set("#title, #btn", { autoAlpha: 0, x: '-300px', filter: 'blur(20px)' });
 
-    return () => ctx.revert
-  }, [])
+      // Animation: move text and button to their original position, remove blur, and fade in with stagger
+      tl.to("#title, #btn", {
+        delay: 0.3,
+        duration: 2.5,
+        x: 0,
+        filter: 'blur(0px)',
+        autoAlpha: 1,
+        ease:"power2.inout",// Easing function
+        stagger: {
+          each: 0.1,
+        from: 'right',
+        ease: 'power2.inOut',
+        
+        }, // Stagger the animation start times
+      });
+    }, comp.current);
+
+    // Clean up the animation context on component unmount
+    return () => ctx.revert();
+  }, []);
+
+  useEffect(() => {
+    const elements = gsap.utils.toArray(".animate");
+
+    elements.forEach((element, index) => {
+      gsap.fromTo(element, 
+        {
+          autoAlpha: 0,
+          y: 50,
+          filter: 'blur(10px)'
+        }, 
+        {
+          autoAlpha: 1,
+          y: 0,
+          filter: 'blur(0px)',
+          duration: 1.5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+          delay: index * 0.2, // Stagger animation based on index
+        }
+      );
+    });
+
+  }, []);
 
   return (
-    <div className="text-white flex flex-col lg:gap-[300px]">
-      <div className="relative w-full " ref={comp}>
-        <img className="w-full blur-[2px] brightness-[.90]" src={image} alt="" loading="lazy"/>
-        <div id="title-btn-container " className="absolute lg:top-[250px] top-[40px] right-0 left-0 bottom-0 m-auto flex flex-col items-center gap-[8px]">
+    <div className="text-white flex flex-col lg:gap-[100px]">
+      <div className="relative w-full ">
+        <img  className="w-full blur-[2px] brightness-[.90]" src={image} alt="" loading="lazy"/>
+        <div ref={comp} id="title-btn-container " className="absolute top-0 right-0 left-0 bottom-0 m-auto flex flex-col justify-center items-center gap-[8px]" >
           <h1 id="title" className="text-white font-spaceGrotesk lg:text-[72px] text-[24px] font-semibold">
             HACKPRO INFOSOLUTION
           </h1>
@@ -108,8 +155,8 @@ const Home = () => {
           </NavLink>
         </div>
       </div>
-      <div className="lg:my-[40px] lg:mx-[80px] lg:mt-0 m-[40px]">
-        <div className="flex flex-col">
+      <div className="lg:my-[30px] lg:mx-[80px] lg:mt-0 m-[40px]" ref={animateRef}>
+        <div className="animate flex flex-col">
           <div className="flex justify-center">
             <h3 className=" mb-[100px] text-[30px] lg:text-[50px] text-white p-[20px] border-[4px] border-green">
               Our Courses
@@ -155,7 +202,7 @@ const Home = () => {
             </Slider>
           </div>
         </div>
-        <div className="relative mt-[80px] lg:mt-[160px] border-[4px] border-green lg:p-[70px] p-[30px]">
+        <div className="animate relative mt-[80px] lg:mt-[160px] border-[4px] border-green lg:p-[70px] p-[30px]">
           <div className="absolute top-0 right-0 left-0 bottom-0 m-auto flex items-center justify-center -z-30 opacity-30 ">
             <svg
               className="lg:h-[350px] lg:w-[350px] h-[250px] w-[250px]"
@@ -246,7 +293,7 @@ const Home = () => {
             employers frequently need or favour certificates.
           </p>
         </div>
-        <div className="flex items-center flex-col mt-[300px]">
+        <div className="animate flex items-center flex-col mt-[300px]">
           <div className=" border-[4px] border-green w-fit">
             <h3 className="text-[24px] lg:text-[50px] p-[20px]">
               Training and Sessions
@@ -415,7 +462,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="lg:mt-[280px] flex flex-col items-center lg:gap-[100px] gap-[70px] my-[80px] lg:my-[160px] w-full">
+        <div className="animate lg:mt-[280px] flex flex-col items-center lg:gap-[100px] gap-[70px] my-[80px] lg:my-[160px] w-full">
           <div className=" border-[4px] border-green w-fit">
             <h3 className="text-[24px] lg:text-[50px] p-[20px] text-center">
               Tools you Learn
@@ -504,7 +551,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col lg:gap-[100px] gap-[70px] items-center my-[56px] lg:my-[128px]">
+        <div className=" w-full flex flex-col lg:gap-[100px] gap-[70px] items-center my-[56px] lg:my-[128px]">
           <div className=" border-[4px] border-green w-fit">
             <h3 className="text-[24px] lg:text-[50px] lg:p-[20px] p-[10px] text-center">
               Certifications & Accreditations
