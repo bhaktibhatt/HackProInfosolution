@@ -40,9 +40,9 @@ function App() {
 
     return (
         <Router>
-            <div>
+            {/* <div>
                 {isLoading && <div className="loader"></div>}
-            </div>
+            </div> */}
             <div className=' font-raleway '>
                 <ScrollToTop/>
                 <Navbar/>
