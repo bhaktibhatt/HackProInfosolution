@@ -21,7 +21,7 @@
     display: none;
 }
 
-.loader{
+/* .loader{
     position: fixed;
     top: 0;
     left: 0;
@@ -56,4 +56,4 @@
     to {
       transform: rotate(1turn);
     }
-  }
+  } */
