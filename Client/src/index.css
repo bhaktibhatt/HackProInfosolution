@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
+
 .gradient{
     mask: linear-gradient(90deg, transparent, #ffffff 10%, #ffffff 90%, transparent);
     -webkit-mask: linear-gradient(90deg, transparent, #ffffff 10%, #ffffff 90%, transparent);

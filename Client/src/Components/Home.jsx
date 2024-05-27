@@ -158,7 +158,7 @@ const Home = () => {
       <div className="lg:my-[30px] lg:mx-[80px] lg:mt-0 m-[40px]" ref={animateRef}>
         <div className="animate flex flex-col">
           <div className="flex justify-center">
-            <h3 className=" mb-[100px] text-[30px] lg:text-[50px] text-white p-[20px] border-[4px] border-green">
+            <h3 id="course" className=" mb-[100px] text-[30px] lg:text-[50px] text-white p-[20px] border-[4px] border-green">
               Our Courses
             </h3>
           </div>
