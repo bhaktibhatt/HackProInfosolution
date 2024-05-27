@@ -14,28 +14,30 @@ import Computernetwork from './pages/Computernetwork.jsx'
 import Registrationform from './pages/Registrationform.jsx'
 import ScrollToTop from './Components/ScrollToTop.js'
 function App() {
-    const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const handleLoad = () => {
-      const loader = document.querySelector('.loader');
-      if (loader) {
-        loader.classList.add('loader--hidden');
-        loader.addEventListener('transitionend', handleTransitionEnd);
-      }
-    };
+      const handleLoad = () => {
+          console.log("Window loaded");
+          const loader = document.querySelector('.loader');
+          if (loader) {
+              loader.classList.add('loader--hidden');
+              loader.addEventListener('transitionend', handleTransitionEnd);
+          }
+      };
 
-    const handleTransitionEnd = (event) => {
-      const loader = event.target;
-      loader.removeEventListener('transitionend', handleTransitionEnd);
-      setIsLoading(false); // Set state to remove the loader
-    };
+      const handleTransitionEnd = (event) => {
+          const loader = event.target;
+          console.log("Transition ended");
+          loader.removeEventListener('transitionend', handleTransitionEnd);
+          setIsLoading(false); // Set state to remove the loader
+      };
 
-    window.addEventListener('load', handleLoad);
+      window.addEventListener('load', handleLoad);
 
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
+      return () => {
+          window.removeEventListener('load', handleLoad);
+      };
   }, []);
 
     return (
