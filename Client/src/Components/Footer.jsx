@@ -2,7 +2,7 @@ import React from 'react'
 import footerBg from '../assets/footerbg.png'
 import { NavLink } from "react-router-dom";
 const Footer = () => {
-  const handleHomeClick = () => {
+  const handleClick = () => {
     window.scrollTo(0, 0);
   };
 
@@ -29,7 +29,7 @@ const Footer = () => {
           <h2 className='font-semibold lg:text-[20px]'>Browse</h2>
           <ul className='lg:text-[20px] text-[10px]'>
             <li className="hover:text-green">
-              <NavLink to="/" onClick={handleHomeClick}>Home</NavLink> 
+              <NavLink to="/" onClick={handleClick}>Home</NavLink> 
             </li>
             <li className="hover:text-green">
             <NavLink to="/about"> About Us</NavLink>
@@ -37,7 +37,9 @@ const Footer = () => {
             <li className="hover:text-green">
               <NavLink to="/" onClick={handleCourseClick}> Courses</NavLink>
             </li>
-            <li className="hover:text-green">Workshops</li>
+            <li className="hover:text-green">
+              <NavLink to="/workshops" onClick={handleClick}>Workshops</NavLink>
+              </li>
           </ul>
         </div>
         <div className='flex flex-col '>
@@ -46,7 +48,9 @@ const Footer = () => {
             <li className="hover:text-green">
             <NavLink to="/" onClick={handleCourseClick}> Courses</NavLink>
             </li>
-            <li className="hover:text-green">Workshops</li>
+            <li className="hover:text-green">
+              <NavLink to="/workshops" onClick={handleClick}>Workshops</NavLink>
+              </li>
           </ul>
         </div>
         <div className='flex flex-col'>

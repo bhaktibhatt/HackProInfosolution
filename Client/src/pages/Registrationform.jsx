@@ -12,7 +12,7 @@ const Registrationform = () => {
           src={pageBg}
           alt="bannerbg"
         />
-        <h1 className="text-[35px] lg:text-[72px] font-semibold top-[48px] left-[40px] lg:top-[288px] lg:left-[128px]">
+        <h1 className="text-[35px] lg:pt-[150px] lg:text-[72px] font-semibold top-[48px] left-[40px] lg:top-[288px] lg:left-[128px]">
           Register to get Details
         </h1>
         <div className="text-green font-semibold flex flex-col bg-black w-fit border-[2px] border-green items-center p-[40px] mb-[100px]  pt-[20px] lg:mb-[200px]">
