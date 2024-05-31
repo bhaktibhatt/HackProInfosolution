@@ -34,7 +34,7 @@ app.post('/register', async(req, res) => {
         console.log("User not found...Creating new user.")
         addUser(user)
         res.status(201)
-        res.redirect('/')
+        res.redirect('/SuccessRegisteration')
     }
     else {
         console.log("ERR - user found")
@@ -51,7 +51,7 @@ app.post('/register', async(req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`server has started! at port 3000. http://localhost:${port}/`)
+    console.log(`Server has started! at port 3000. http://localhost:${port}/ on local and https://hackproinfosolutionserver.onrender.com on cloud.`)
 })
 
 async function checkUser(inputuser) {

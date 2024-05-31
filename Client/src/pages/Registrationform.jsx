@@ -182,7 +182,7 @@ const Registrationform = () => {
                   mode: regradiobuttonsvalue,
                 };
                 let stringFormData = JSON.stringify(reguser);
-                fetch("http://localhost:3000/register", {
+                fetch("https://hackproinfosolutionserver.onrender.com/register", {
                   method: "POST",
                   headers: {
                     "Content-Type": "Application/JSON",
