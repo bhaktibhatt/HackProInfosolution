@@ -5,7 +5,8 @@ import { NavLink } from 'react-router-dom';
 const Ethicalhacking = () => {
     return (
         <div className='relative w-full text-white'>
-                <img className='absolute w-full h-full opacity-20 -z-10' src={pageBg} alt="bannertop" />
+                               <div className='absolute inset-0 w-full h-full bg-repeat-y opacity-20 -z-10' style={{ backgroundImage: `url(${pageBg})`, backgroundSize: 'cover' }}></div>
+
                 <div className='flex flex-col items-center justify-center lg:gap-[100px] lg:px-[100px] lg:py-[200px] py-[100px]'>
                 <div className='bg-black w-fit border-[4px] border-green lg:px-[100px] px-[40px] lg:py-[20px] lg:m-0 m-[40px]'>
                 <h1 className='text-[32px] text-center lg:text-[96px] font-semibold lg:leading-[150px]'>Ethical Hacking <br/>and Cyber Security</h1>

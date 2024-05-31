@@ -7,12 +7,8 @@ const Registrationform = () => {
   return (
     <div className="">
       <div className="relative w-full flex flex-col items-center gap-[100px] text-white ">
-        <img
-          className="absolute w-full h-full opacity-20 -z-10"
-          src={pageBg}
-          alt="bannerbg"
-        />
-        <h1 className="text-[35px] lg:text-[72px] font-semibold top-[48px] left-[40px] lg:top-[288px] lg:left-[128px]">
+      <div className='absolute inset-0 w-full h-full bg-repeat-y opacity-20 -z-10' style={{ backgroundImage: `url(${pageBg})`, backgroundSize: 'cover' }}></div>
+        <h1 className="text-[35px] lg:pt-[150px] lg:text-[72px] font-semibold top-[48px] left-[40px] lg:top-[288px] lg:left-[128px]">
           Register to get Details
         </h1>
         <div className="text-green font-semibold flex flex-col bg-black w-fit border-[2px] border-green items-center p-[40px] mb-[100px]  pt-[20px] lg:mb-[200px]">

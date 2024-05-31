@@ -18,6 +18,10 @@
 /* .slick-slide div{
     margin-left:0 1rem;
 } */
+
+.slick-dots li.slick-active button:before {
+    color:White !important;
+}
 .slick-prev::before,.slick-next::before{
     color: #47D85F;
    height:20px;
@@ -30,4 +34,11 @@
         margin: 0;
       }
 
+}
+@media screen and (max-width:390px) {
+    .slick-slider .slick-slide {
+        padding: 10px 20px 10px 2.5px;
+
+        margin: 0;
+      }
 }

@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import "./Navbar.css"
+
 const Navbar = () => {
 
     let menuRef = useRef();
     let aboutRef = useRef();
+    let workshopRef = useRef();
     let courseRef = useRef();
     let contactRef = useRef();
     let navRef1 = useRef();
@@ -29,6 +30,14 @@ const Navbar = () => {
     useEffect(()=>{
         let handler = (e) =>{
             if(aboutRef.current.contains(e.target)){
+                setMenuOpen(false);
+            }
+        }
+        document.addEventListener("click", handler);
+    });
+    useEffect(()=>{
+        let handler = (e) =>{
+            if(workshopRef.current.contains(e.target)){
                 setMenuOpen(false);
             }
         }
@@ -138,6 +147,7 @@ const Navbar = () => {
                         </div>
                     </li>
                     <li className="px-[32px] cursor-pointer hover:text-green"><NavLink to="/about" ref={aboutRef}>About</NavLink></li>
+                    <li className="px-[32px] cursor-pointer hover:text-green"><NavLink to="/workshops" ref={workshopRef}>Workshops</NavLink></li>
                     <li className="relative text-center lg:pb-0 pb-[20px] px-[32px]">
                         <button className="cursor-pointer hover:text-green" onClick={() => setShowContact(!showContact)}>Contact</button> 
                         <div className={` bg-black text-white border-2 border-green lg:absolute py-[12px] px-[16px] lg:left-[-100px] w-[300px] rounded-md ${showContact ? 'flex' : 'hidden'}`} ref={contactRef}>

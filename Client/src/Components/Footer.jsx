@@ -1,6 +1,18 @@
 import React from 'react'
 import footerBg from '../assets/footerbg.png'
+import { NavLink } from "react-router-dom";
 const Footer = () => {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
+
+  const handleCourseClick = () => {
+    const element = document.getElementById('course');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     // href='https://github.com/bhaktibhatt href='https://github.com/prathmesh-ka-github''
     <div className='w-full font-raleway mt-auto text-white'>
@@ -14,31 +26,43 @@ const Footer = () => {
         </div>
         <div className='flex lg:flex-row lg:gap-[45px] gap-[20px]'>
         <div className='flex flex-col'>
-          <h2 className='font-semibold lg:text-[20px]'>Browser</h2>
+          <h2 className='font-semibold lg:text-[20px]'>Browse</h2>
           <ul className='lg:text-[20px] text-[10px]'>
-            <li className="hover:text-green">Home</li>
-            <li className="hover:text-green">About Us</li>
-            <li className="hover:text-green">Courses</li>
-            <li className="hover:text-green">Workshops</li>
+            <li className="hover:text-green">
+              <NavLink to="/" onClick={handleClick}>Home</NavLink> 
+            </li>
+            <li className="hover:text-green">
+            <NavLink to="/about"> About Us</NavLink>
+            </li>
+            <li className="hover:text-green">
+              <NavLink to="/" onClick={handleCourseClick}> Courses</NavLink>
+            </li>
+            <li className="hover:text-green">
+              <NavLink to="/workshops" onClick={handleClick}>Workshops</NavLink>
+              </li>
           </ul>
         </div>
         <div className='flex flex-col '>
-          <h2 className='font-semibold lg:text-[20px] text-center'>Services</h2>
+          <h2 className='font-semibold lg:text-[20px]'>Services</h2>
           <ul className='lg:text-[20px] text-[10px]'>
-            <li className="hover:text-green">Courses</li>
-            <li className="hover:text-green">Workshops</li>
+            <li className="hover:text-green">
+            <NavLink to="/" onClick={handleCourseClick}> Courses</NavLink>
+            </li>
+            <li className="hover:text-green">
+              <NavLink to="/workshops" onClick={handleClick}>Workshops</NavLink>
+              </li>
           </ul>
         </div>
         <div className='flex flex-col'>
           <h2 className='font-semibold lg:text-[20px] '>Contact</h2>
           <ul className='lg:text-[20px] text-[10px]'>
-            <li className=" flex font-mono lg:gap-[10px] gap-[5px]">
+            <li className=" flex  items-center font-mono lg:gap-[10px] gap-[5px]">
                 <svg xmlns="http://www.w3.org/2000/svg" className="lg:w-[24px] lg:h-[24px] w-[20px] h-[20px]" viewBox="0 0 256 256"><path fill="currentColor" d="m222.37 158.46l-47.11-21.11l-.13-.06a16 16 0 0 0-15.17 1.4a8.12 8.12 0 0 0-.75.56L134.87 160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16 16 0 0 0 1.32-15.06v-.12L97.54 33.64a16 16 0 0 0-16.62-9.52A56.26 56.26 0 0 0 32 80c0 79.4 64.6 144 144 144a56.26 56.26 0 0 0 55.88-48.92a16 16 0 0 0-9.51-16.62M176 208A128.14 128.14 0 0 1 48 80a40.2 40.2 0 0 1 34.87-40a.61.61 0 0 0 0 .12l21 47l-20.67 24.74a6.13 6.13 0 0 0-.57.77a16 16 0 0 0-1 15.7c9.06 18.53 27.73 37.06 46.46 46.11a16 16 0 0 0 15.75-1.14a8.44 8.44 0 0 0 .74-.56L168.89 152l47 21.05h.11A40.21 40.21 0 0 1 176 208"/></svg>
                 <a className="hover:text-green" href="tel:+917972771883" target="_blank">+91-79727-71883</a></li>
-            <li className="flex lg:gap-[10px] gap-[5px]">
+            <li className="flex  items-center lg:gap-[10px] gap-[5px]">
                 <svg xmlns="http://www.w3.org/2000/svg" className="lg:w-[24px] lg:h-[24px] w-[20px] h-[20px]" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
                 <a className="hover:text-green" href="mailto:hackproinfosolution@gmail.com " target="_blank">hackproinfosolution@gmail.com</a></li>
-            <li className="flex lg:gap-[10px] gap-[5px]">
+            <li className="flex items-center lg:gap-[10px] gap-[5px]">
                 <svg xmlns="http://www.w3.org/2000/svg" className="lg:w-[24px] lg:h-[24px] w-[20px] h-[20px]" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
                 <a className="hover:text-green " href="https://www.instagram.com/hackproinfosolution/" target="_blank">@hackproinfosolution</a></li>
           </ul>
@@ -47,7 +71,7 @@ const Footer = () => {
       </div>
       <div className='flex lg:flex-row flex-col items-center lg:py-[10px] lg:px-[30px] justify-between py-[10px] px-[10px] '>
           <p className='font-semibold lg:text-[20px] text-[10px]'>© Copyright 2024 HackPro Infosolution</p>
-          <p className='font-semibold lg:text-[20px] text-[10px]'>Designed and Developed By <span className='hover:text-green font-mono'><a href='https://github.com/bhaktibhatt'>bhaktibhatt</a></span> and <span className='hover:text-green font-mono'><a href='https://github.com/prathmesh-ka-github'>prathamc0des</a></span></p>
+          <p className='font-semibold lg:text-[20px] text-[10px]'>Designed and Developed By <span className='text-green font-mono'><a href='https://github.com/bhaktibhatt'>bhaktibhatt</a></span> and <span className='text-green font-mono'><a href='https://github.com/prathmesh-ka-github'>prathamc0des</a></span></p>
       </div>
     </div>
   )
