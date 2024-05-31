@@ -42,13 +42,9 @@ const Workshops = () => {
 
   return (
     
-    <div>
-      <div className="relative w-full flex flex-col items-center gap-[100px] text-white ">
-        <img
-          className="absolute w-full h-full opacity-20 -z-10"
-          src={pageBg}
-          alt="bannerbg"
-        />
+    <div className="relative">
+      <div className='absolute inset-0 w-full h-auto bg-repeat-y opacity-20 -z-10' style={{ backgroundImage: `url(${pageBg})`, backgroundSize: 'cover' }}></div>
+      <div className="w-full flex flex-col items-center gap-[100px] text-white ">
         <div className='lg:p-[200px] lg:pt-[20px] p-[20px] flex flex-col items-center w-full gap-[100px]'>
         <div className='bg-black border-[2px] border-green w-fit lg:p-[30px] p-[20px]'>
            <h1 className='text-[30px] text-center'>Workshops Conducted</h1>

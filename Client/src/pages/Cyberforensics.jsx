@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Cyberforensics = () => {
   return (
     <div className='relative text-white w-full'>
-                <img className='absolute w-full h-full opacity-20 -z-10' src={pageBg} alt="bannertop" />
+        <div className='absolute inset-0 w-full h-full bg-repeat-y opacity-20 -z-10' style={{ backgroundImage: `url(${pageBg})`, backgroundSize: 'cover' }}></div>
                 <div className='flex flex-col items-center justify-center gap-[100px] lg:px-[100px] lg:py-[200px] py-[100px]'>
                 <div className='bg-black w-fit border-[4px] border-green lg:px-[40px] lg:py-[20px] px-[10px] py-[20px] lg:m-0 mx-[40px]'>
                     <h1 className='text-[32px] text-center lg:text-[96px] font-semibold '>Cyber Forensics<br/>Investigation</h1>

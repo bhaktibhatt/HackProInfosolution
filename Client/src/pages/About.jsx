@@ -5,7 +5,7 @@ const About = () => {
   return (
     
       <div className='relative text-white'>
-        <img className='absolute w-full h-full opacity-20 -z-10'  src={pageBg} alt="" />
+          <div className='absolute inset-0 w-full h-full bg-repeat-y opacity-20 -z-10' style={{ backgroundImage: `url(${pageBg})`, backgroundSize: 'cover' }}></div>
         <div className='flex flex-col items-center justify-center gap-[100px] lg:px-[100px] lg:py-[200px] py-[100px]'>
         <div className='bg-black w-fit border-[4px] border-green px-[40px] lg:py-[20px]'>
         <h1 className='text-[32px] text-center lg:text-[96px] font-semibold '>About Us</h1>
