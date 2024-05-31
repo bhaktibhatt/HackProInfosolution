@@ -29,6 +29,7 @@ app.get('/getregistrations', async(req, res) => {
 
 app.post('/register', async(req, res) => {
     const user = req.body
+    console.log(user)
     let result = await checkUser(user)
     if(result) {
         console.log("User not found...Creating new user.")
@@ -45,7 +46,6 @@ app.post('/register', async(req, res) => {
             "code":400
         })
     }
-    next();
     console.log(user)
 })
 
