@@ -35,7 +35,7 @@ app.post('/register', async(req, res) => {
         console.log("User not found...Creating new user.")
         addUser(user)
         res.status(201)
-        res.redirect('/SuccessRegistration')
+        res.redirect('https://hackproinfosolution.onrender.com/SuccessRegistration')
     }
     else {
         console.log("ERR - user found")
