@@ -179,7 +179,7 @@ const Registrationform = () => {
                   education: regedu,
                   university: reguni,
                   course: regcourse,
-                  mode: regradiobuttonsvalue,
+                  modeofinstruction: regradiobuttonsvalue,
                 };
                 let stringFormData = JSON.stringify(reguser);
                 fetch("https://hackproinfosolutionserver.onrender.com/register", {

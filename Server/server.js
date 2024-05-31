@@ -35,7 +35,7 @@ app.post('/register', async(req, res) => {
         console.log("User not found...Creating new user.")
         addUser(user)
         res.status(201)
-        res.redirect('/SuccessRegisteration')
+        res.redirect('/SuccessRegistration')
     }
     else {
         console.log("ERR - user found")
