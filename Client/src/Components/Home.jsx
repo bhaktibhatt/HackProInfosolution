@@ -69,7 +69,7 @@ const Home = () => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 766,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -142,10 +142,10 @@ const Home = () => {
 
   return (
     <div className="text-white flex flex-col lg:gap-[100px]">
-      <div className="relative w-full ">
-        <img  className="w-full blur-[2px] brightness-[.90]" src={image} alt="hero-img"  />
+      <div className="relative w-full overflow-hidden">
+        <img  className="lg:w-full lg:h-full w-auto max-w-none h-[70vh] blur-[2px] brightness-[.90]" src={image} alt="hero-img"  />
         <div ref={comp} id="title-btn-container " className="absolute top-0 right-0 left-0 bottom-0 m-auto flex flex-col justify-center items-center gap-[8px]" >
-          <h1 id="title" className="text-white font-spaceGrotesk lg:text-[72px] text-[24px] font-semibold">
+          <h1 id="title" className="text-white font-spaceGrotesk lg:text-[72px] md:text-[50px] text-[24px] font-semibold">
             HACKPRO INFOSOLUTION
           </h1>
           <NavLink to="/registrationform">
@@ -293,7 +293,7 @@ const Home = () => {
             employers frequently need or favour certificates.
           </p>
         </div>
-        <div className="animate flex items-center flex-col mt-[300px]">
+        <div className="animate flex items-center flex-col lg:mt-[300px] mt-[100px]">
           <div className=" border-[4px] border-green w-fit">
             <h3 className="text-[24px] lg:text-[50px] p-[20px]">
               Training and Sessions
