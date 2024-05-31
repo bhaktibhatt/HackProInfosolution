@@ -202,11 +202,8 @@ const Registrationform = () => {
                         setTimeout(fadein, 10000);
                       }
                     });
-                  } else {
-                    window.location.replace("/");
                   }
                 });
-                navigate(`/`);
               });
           })
         }
