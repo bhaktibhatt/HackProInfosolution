@@ -12,7 +12,7 @@ import Cyberforensics from './pages/Cyberforensics.jsx';
 import Bugbounty from './pages/Bugbounty.jsx';
 import Computernetwork from './pages/Computernetwork.jsx';
 
-import SuccessRegisteration from './pages/SuccessRegisteration.jsx';
+import SuccessRegistration from './pages/SuccessRegistration.jsx';
 import Registrationform from './pages/Registrationform.jsx';
 import Workshops from './pages/Workshops.jsx';
 
