@@ -33,7 +33,7 @@ function App() {
                     <Route exact path='/bugbounty' element={<Bugbounty />}></Route>
                     <Route exact path='/computernetwork' element={<Computernetwork />}></Route>
                     <Route exact path='/registrationform' element={<Registrationform/>}></Route>
-                    <Route exact path='/successregistration' element={<SuccessRegisteration/>}></Route>
+                    <Route exact path='/successregistration' element={<SuccessRegistration/>}></Route>
                     <Route exact path='/workshops' element={<Workshops/>}></Route>
                 </Routes>
             </div>
