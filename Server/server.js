@@ -35,6 +35,7 @@ app.post('/register', async(req, res) => {
     if(result) {
         console.log("User not found...Creating new user.")
         addUser(user)
+        bhejconfirmationmail(user.name, user.email, user.course).catch(console.error)
         res.status(201)
         res.redirect('https://hackproinfosolution.onrender.com/SuccessRegistration')
     }
@@ -77,4 +78,32 @@ async function addUser(user) {
             console.error(err.message)
         }
     }
-} 
+}
+
+//? Sending mails and shit
+const transporter = nodemailer.createTransport({
+    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false, // Use `true` for port 465, `false` for all other ports
+    auth: {
+        user: process.env.NODEMAILER_USER,
+        pass: process.env.NODEMAILER_PASS,
+    },
+});
+
+
+async function bhejconfirmationmail(toname, toaddress, coursename) {
+    let mailOptions = {
+        from: {
+            name: "Hackpro Infosolution",
+            address: process.env.NODEMAILER_USER
+        }, // sender address
+        to: `${toaddress}`, // list of receivers
+        subject: "Your Registration has been completed!", // Subject line
+        text: `Hello ${toname}!, Thank you for registering for ${coursename} course here at Hackpro Infosolution. \n \nThis is a confirmation email. We will contact you soon for your course. \n \nHackPro Infosolution Career Development and Training Department is one of the most trusted and by far the largest source for information security training, ethical hacking & cyber security courses providing institute. We have delivered numerous training sessions, workshops, seminars and conferences at various colleges, institutions and have being regularly invited by Engineering Colleges, Organizations, Corporates and Government agencies to speak and distribute knowledge about Cyber Security. \n \n Courses we Provide - \n    ⬢ Ethical Hacking & Cyber Security. \n    ⬢ Certified Penetration Testing. \n    ⬢ Cyber Forensic Investigation. \n    ⬢ Certified Bug Bounty Hunter. \n    ⬢ Computer Networking. \n\n\nThanks and Regards, \n\nMr. Vishwajeet Mali,\nHackpro Infosolution,\nPune, Maharashtra, India.\nContact Number - +91 7972771883 `,
+        cc : "connect.prathmeshkale@outlook.com"
+    }
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Message sent: %s", info.messageId);
+}
