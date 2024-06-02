@@ -40,6 +40,8 @@ app.post('/register', async(req, res) => {
         bhejconfirmationmail(user.name, user.email, user.course).catch(console.error)
         res.status(201)
         res.set('Access-Control-Allow-Origin', 'https://hackproinfosolution.onrender.com');
+        res.set('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+        res.set('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
         res.redirect('https://hackproinfosolution.onrender.com/SuccessRegistration')
     }
     else {
