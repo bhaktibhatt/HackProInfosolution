@@ -42,9 +42,9 @@ app.post('/register', async(req, res) => {
         addUser(user)
         bhejconfirmationmail(user.name, user.email, user.course).catch(console.error)
         res.status(201)
-        res.set('Access-Control-Allow-Origin', 'https://hackproinfosolution.onrender.com');
-        res.set('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS');
-        res.redirect('https://hackproinfosolution.onrender.com/SuccessRegistration')
+        // res.set('Access-Control-Allow-Origin', 'https://hackproinfosolution.onrender.com');
+        // res.set('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS');
+        // res.redirect('https://hackproinfosolution.onrender.com/SuccessRegistration')
     }
     else {
         console.log("ERR - user found")

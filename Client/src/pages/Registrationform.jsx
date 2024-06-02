@@ -203,6 +203,9 @@ const Registrationform = () => {
                                             }
                                         });
                                     }
+                                    else {
+                                        window.location.replace("https://hackproinfosolution.onrender.com/SuccessRegistration");
+                                    }
                                 });
                             });
                     })
