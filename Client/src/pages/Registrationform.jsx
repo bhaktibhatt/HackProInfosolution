@@ -204,6 +204,7 @@ const Registrationform = () => {
                                         });
                                     }
                                     else {
+                                        console.log("Sucessful registration. Redirecting...")
                                         window.location.replace("https://hackproinfosolution.onrender.com/SuccessRegistration");
                                     }
                                 });
