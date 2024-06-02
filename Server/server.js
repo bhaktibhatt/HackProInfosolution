@@ -9,7 +9,7 @@ const port = 3000
 dotenv.config();
 app.use(express.json())
 app.use(express.static(__dirname + '/'));
-app.use(cors())
+app.use(cors({ origin : "https://hackproinfosolution.onrender.com"}))
 
 mongoose.connect("mongodb+srv://hackpro:hackpropassword@hi-db.d9e3qvw.mongodb.net/HI-DB")
 const Registrations = require("./userModal");
@@ -39,6 +39,7 @@ app.post('/register', async(req, res) => {
         addUser(user)
         bhejconfirmationmail(user.name, user.email, user.course).catch(console.error)
         res.status(201)
+        res.set('Access-Control-Allow-Origin', 'https://hackproinfosolution.onrender.com/SuccessRegistration');
         res.redirect('https://hackproinfosolution.onrender.com/SuccessRegistration')
     }
     else {
