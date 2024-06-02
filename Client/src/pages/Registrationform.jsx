@@ -49,13 +49,13 @@ const Registrationform = () => {
                     id="courses-input"
                   >
                     <option value="">--Select course--</option>
-                    <option value="CEH">
+                    <option value="Ethical Hacking and Cyber Security">
                       Ethical Hacking and Cyber Security
                     </option>
-                    <option value="CF">Cyber Forensics</option>
-                    <option value="PT">Pentration Testing</option>
-                    <option value="BB">Bug Bounty</option>
-                    <option value="CN">Computer Network</option>
+                    <option value="Cyber Forensics">Cyber Forensics</option>
+                    <option value="Pentration Testing">Pentration Testing</option>
+                    <option value="Bug Bounty">Bug Bounty</option>
+                    <option value="Computer Network">Computer Network</option>
                   </select>
                   <div className="absolute top-[12px] right-[12px] pointer-events-none">
                     <svg
