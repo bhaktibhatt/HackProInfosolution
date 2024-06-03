@@ -11,11 +11,11 @@ const Registrationform = () => {
                 <h1 className="text-[35px] lg:pt-[150px] lg:text-[72px] font-semibold top-[48px] left-[40px] lg:top-[288px] lg:left-[128px]">
                     Register to get Details
                 </h1>
-                <div className="text-green font-semibold flex flex-col bg-black w-fit border-[2px] border-green items-center p-[40px] mb-[100px]  pt-[20px] lg:mb-[200px]">
+                <div className="text-green font-semibold flex flex-col bg-black w-fit border-[2px] border-green items-center p-[25px] md:p-[40px] lg:p-[50px] mb-[100px]  pt-[20px] lg:mb-[200px]">
                     <form id="registrationform">
                         <div>
                             <h3 className="text-[24px] text-left">Personal Details :</h3>
-                            <div className="flex w-full lg:flex-row flex-col gap-[16px] justify-around mt-[40px] mb-[40px]">
+                            <div className="flex w-full lg:flex-row flex-col gap-[16px] justify-around my-[30px]">
                                 <input
                                     id="name-input"
                                     className="bg-black2 focus:outline-none focus:border-[2px] focus:ring-1 border-2 rounded-[6px] border-green p-[8px] w-[300px]"
@@ -118,8 +118,11 @@ const Registrationform = () => {
                                     />
                                 </div>
                                 <div>
-                                    <h3 className="mb-[20px] font-bold">Mode of Instruction :</h3>
-                                    <div className="flex items-center gap-x-[8px]">
+                                    <h3 className="mb-[20px] text-[18px] font-bold">Mode of Instruction :</h3>
+                                    <div className="flex flex-col items-center">
+
+                                   
+                                    <div className="flex text-[18px] items-center gap-x-[8px]">
                                         <input
                                             type="radio"
                                             name="MODE"
@@ -130,7 +133,7 @@ const Registrationform = () => {
                                             Online
                                         </label>
                                     </div>
-                                    <div className="flex items-center gap-x-[8px]">
+                                    <div className="flex text-[18px] items-center gap-x-[8px]">
                                         <input
                                             type="radio"
                                             name="MODE"
@@ -140,6 +143,7 @@ const Registrationform = () => {
                                         <label htmlFor="offline">
                                             Offline
                                         </label>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
