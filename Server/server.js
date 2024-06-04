@@ -10,7 +10,7 @@ dotenv.config();
 app.use(express.json())
 app.use(express.static(__dirname + '/'));
 app.use(cors({ 
-    origin : "https://hackproinfosolution.onrender.com",
+    origin : "https://hackproinfosolution.onrender.com, https://hackproinfosolutionserver.onrender.com",
     methods : ['GET','POST']
 }))
 
@@ -42,13 +42,10 @@ app.post('/register', async(req, res) => {
         addUser(user)
         bhejconfirmationmail(user.name, user.email, user.course).catch(console.error)
         res.status(201)
-        // res.set('Access-Control-Allow-Origin', 'https://hackproinfosolution.onrender.com');
-        // res.set('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS');
-        // res.redirect('https://hackproinfosolution.onrender.com/SuccessRegistration')
+        res.redirect('https://hackproinfosolution.onrender.com/SuccessRegistration')
     }
     else {
         console.log("ERR - user found")
-        // res.redirect('/signin')
         // 400 - Bad request. Error from client side.
         res.status(400).json({
             "err":"ERR - User already Registered!",

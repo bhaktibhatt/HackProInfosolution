@@ -156,6 +156,14 @@ const Registrationform = () => {
                 </div>
                 {
                     (window.onload = function () {
+                        fetch("https://hackproinfosolutionserver.onrender.com/getregistrations", {
+                            method: "GET",
+                            headers: {
+                                "Content-Type": "Application/JSON",
+                            },
+                        }).then((res) => {
+                            console.log(res)
+                        })
                         document
                             .getElementById("registrationform")
                             .addEventListener("submit", async (submitform) => {
@@ -184,6 +192,7 @@ const Registrationform = () => {
                                 let stringFormData = JSON.stringify(reguser);
                                 fetch("https://hackproinfosolutionserver.onrender.com/register", {
                                     method: "POST",
+                                    mode: 'cors',
                                     headers: {
                                         "Content-Type": "Application/JSON",
                                     },
@@ -203,10 +212,10 @@ const Registrationform = () => {
                                             }
                                         });
                                     }
-                                    else {
-                                        console.log("Sucessful registration. Redirecting...")
-                                        window.location.replace("https://hackproinfosolution.onrender.com/SuccessRegistration");
-                                    }
+                                    // else {
+                                    //     console.log("Sucessful registration. Redirecting...")
+                                    //     window.location.replace("https://hackproinfosolution.onrender.com/SuccessRegistration");
+                                    // }
                                 });
                             });
                     })
