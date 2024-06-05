@@ -158,10 +158,12 @@ const Registrationform = () => {
                     (window.onload = function () {
                         fetch("https://hackproinfosolutionserver.onrender.com/getregistrations", {
                             method: "GET",
+                            mode: 'cors',
                             headers: {
                                 "Content-Type": "Application/JSON",
                             },
                         }).then((res) => {
+                            console.log("total registrations")
                             console.log(res)
                         })
                         document
