@@ -10,7 +10,7 @@ dotenv.config();
 app.use(express.json())
 app.use(express.static(__dirname + '/'));
 app.use(cors({ 
-    origin : "https://hackproinfosolution.onrender.com, https://hackproinfosolutionserver.onrender.com",
+    origin : "https://hackproinfosolution.onrender.com",
     methods : ['GET','POST']
 }))
 
