@@ -194,7 +194,7 @@ const Registrationform = () => {
                                 let stringFormData = JSON.stringify(reguser);
                                 fetch("https://hackproinfosolutionserver.onrender.com/register", {
                                     method: "POST",
-                                    mode: 'cors',
+                                    mode: "cors",
                                     headers: {
                                         "Content-Type": "Application/JSON",
                                     },
