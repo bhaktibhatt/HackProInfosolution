@@ -204,7 +204,8 @@ const Registrationform = () => {
                                     },
                                     body: stringFormData,
                                 }).then((res) => {
-                                    if (!res.ok) {
+                                    console.log(res)
+                                    if (res.status == 400) {
                                         res.json().then((data) => {
                                             console.log(data);
                                             if (data.err) {
@@ -218,10 +219,10 @@ const Registrationform = () => {
                                             }
                                         });
                                     }
-                                    // else {
-                                    //     console.log("Sucessful registration. Redirecting...")
-                                    //     window.location.replace("https://hackproinfosolution.onrender.com/SuccessRegistration");
-                                    // }
+                                    if (res.code == 200) {
+                                        console.log("Sucessful registration. Redirecting...")
+                                        window.location.replace("https://hackproinfosolution.onrender.com/SuccessRegistration");
+                                    }
                                 });
                             });
                     })
