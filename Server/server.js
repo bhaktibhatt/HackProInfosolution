@@ -41,7 +41,10 @@ app.post('/register', async(req, res) => {
         console.log("User not found...Creating new user.")
         addUser(user)
         bhejconfirmationmail(user.name, user.email, user.course).catch(console.error)
-        res.status(200)
+        res.status(200).json({
+            "success":"GG - User has been registered successfully",
+            "code":"200"
+        })
         // res.redirect('https://hackproinfosolution.onrender.com/SuccessRegistration')
     }
     else {
