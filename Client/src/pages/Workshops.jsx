@@ -74,7 +74,7 @@ const Workshops = () => {
           <div>
             <div className='flex flex-col items-center lg:gap-[100px] gap-[40px]'>
               <div className='text-[20px] bg-black border-[2px] border-green w-fit p-[20px]'>
-                <p>At DBATU</p>
+                <p>At Orange ITech</p>
               </div>
               <div className='w-[350px] lg:container'>
                 <Slider {...settings}>
@@ -84,7 +84,7 @@ const Workshops = () => {
                 </Slider>
               </div>
               <div className='flex flex-col items-center lg:p-[50px] p-[20px] bg-black2 border-[3px] w-fit border-green'>
-                <p className='text-[20px]'><span className='font-semibold'>Our team conducted a live workshop at OrangeITech Training Institute.</span><br />This session covered the fundamental principles of cybersecurity with the objective of spreading awareness about digital footprinting, email security, and phishing. We also discussed cybercrime reporting and engaged the participants with tools available to them, such as password managers and antivirus software.</p>
+                <p className='text-[20px]'><span className='font-semibold'>Our team conducted a live workshop at Orange ITech Training Institute.</span><br />This session covered the fundamental principles of cybersecurity with the objective of spreading awareness about digital footprinting, email security, and phishing. We also discussed cybercrime reporting and engaged the participants with tools available to them, such as password managers and antivirus software.</p>
               </div>
             </div>
           </div>
