@@ -204,7 +204,11 @@ const Registrationform = () => {
                                     },
                                     body: stringFormData,
                                 }).then((res) => {
-                                    console.log(res.json)
+                                    const response = res.json().then((data) => {
+                                        console.log(data)
+                                    })
+                                    console.log(res.json())
+                                    console.log("response variable"+response)
                                     if (res.status == 400) {
                                         res.json().then((data) => {
                                             console.log(data);
